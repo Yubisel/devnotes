@@ -1,3 +1,45 @@
-site_name: My Docs by GitLab Pages
+site_name: My Docs
 site_url: https://yubisel.gitlab.io
 site_dir: public
+theme:
+  name: material
+  language: es
+  icon:
+    logo: material/library
+  favicon: images/favicon.png
+  palette:
+    scheme: slate
+    primary: teal
+    accent: orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant #carga la pagina por xhr para comportarse como una spa
+    - navigation.tabs #menu superior en tabs
+    - header.autohide
+# markdown_extensions:
+#   - meta
+# hide:
+#   - navigation # Hide navigation
+#   - toc        # Hide table of contents
+# title: Lorem
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      # – fontawesome/brands/behance
+      # – fontawesome/brands/docker
+      # – fontawesome/brands/github
+      # – fontawesome/brands/instagram
+      # – fontawesome/brands/linkedin
+      # – fontawesome/brands/medium
+      # – fontawesome/brands/pied-piper-alt
+      # – fontawesome/brands/product-hunt
+      # – fontawesome/brands/slack
+      # – fontawesome/brands/twitter
+      link: mailto:<email-address>
+      name: squidfunk on Twitter
+
+repo_name: squidfunk/mkdocs-material
+repo_url: https://github.com/squidfunk/mkdocs-material
+copyright: Copyright &copy; 2021 Ing. Yubisel Vega Alvarez
