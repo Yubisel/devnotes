@@ -1,3 +1,6 @@
+---
+title: Lorem ipsum dolor sit amet
+---
 # Welcome to MkDocs
 
 This is a test site hosted on [GitLab Pages](https://pages.gitlab.io). You can
@@ -7,6 +10,12 @@ using it on your projects.
 For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ## Commands
+
+| Method      | Description                          |
+| :----------:| :-----------------------------------:|
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.

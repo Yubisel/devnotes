@@ -1,9 +1,9 @@
-site_name: My Docs
+site_name: '&#60;dev notes/&#62;'
 site_url: https://yubisel.gitlab.io
 site_dir: public
 theme:
   name: material
-  language: es
+  language: en
   icon:
     logo: material/library
   favicon: images/favicon.png
@@ -15,18 +15,36 @@ theme:
     text: Roboto
     code: Roboto Mono
   features:
-    - navigation.instant #carga la pagina por xhr para comportarse como una spa
-    - navigation.tabs #menu superior en tabs
     - header.autohide
-# markdown_extensions:
-#   - meta
-# hide:
-#   - navigation # Hide navigation
-#   - toc        # Hide table of contents
-# title: Lorem
+    - navigation.instant #carga la pagina por xhr para comportarse como una spa
+    - navigation.expand
+    # - toc.integrate
+    # - navigation.tabs #menu superior en tabs
+
+nav:
+  - Inicio: index.md
+  - Administraci&oacute;n:
+    - Seguridad: security.md
+    - Salvas del sistema: backups.md
+  - Gesti&oacute;n:
+    - Configuraci&oacute;n: configuration.md
+    - Codificadores: codecs.md
+    - Compras de activos: aftbuys.md
+    - Activos: aft.md
+    - Exportar al Versat: export.md
+    - Depreciaci&oacute;n: reparation.md
+    - Fecha del sistema: sistemdate.md
+  - Ayuda:
+    - Autores: about/authors.md
+    - Sobre:  about/about.md
+
+markdown_extensions:
+  - toc:
+      toc_depth: 0
+  - meta
 extra:
   social:
-    - icon: fontawesome/solid/paper-plane
+      # social icons
       # – fontawesome/brands/behance
       # – fontawesome/brands/docker
       # – fontawesome/brands/github
@@ -37,9 +55,14 @@ extra:
       # – fontawesome/brands/product-hunt
       # – fontawesome/brands/slack
       # – fontawesome/brands/twitter
-      link: mailto:<email-address>
-      name: squidfunk on Twitter
+      # - fontawesome/solid/paper-plane
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/yubisel/
+      name: LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/Yubisel
+      name: GitHub
 
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: yubisel.gitlab.io
+repo_url: https://gitlab.com/yubisel/mkdocs
 copyright: Copyright &copy; 2021 Ing. Yubisel Vega Alvarez
