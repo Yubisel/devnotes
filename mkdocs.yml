@@ -26,10 +26,15 @@ nav:
   - Programming languages:
     - PHP:
       - Dates: programming_languages/php/dates.md
+  - Database:
+    - MySql: database/mysql.md
   - Operating systems:
-    - Ubuntu: 
+    - Ubuntu:
       - Clipboard: ubuntu/clipboard.md
-    # - Windows: 
+    # - Windows:
+  - ToDo:
+    - Films to watch: todo/films_to_watch.md
+
   - Help:
     - MkDocs: about/mkdocs.md
     - About:  about/about.md
