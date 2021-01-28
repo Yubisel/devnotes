@@ -23,17 +23,17 @@ theme:
 
 nav:
   - Inicio: index.md
-  - Administraci&oacute;n:
-    - Seguridad: security.md
-    - Salvas del sistema: backups.md
-  - Gesti&oacute;n:
-    - Configuraci&oacute;n: configuration.md
-    - Codificadores: codecs.md
-    - Compras de activos: aftbuys.md
-    - Activos: aft.md
-    - Exportar al Versat: export.md
-    - Depreciaci&oacute;n: reparation.md
-    - Fecha del sistema: sistemdate.md
+  # - Administraci&oacute;n:
+  #   - Seguridad: security.md
+  #   - Salvas del sistema: backups.md
+  # - Gesti&oacute;n:
+  #   - Configuraci&oacute;n: configuration.md
+  #   - Codificadores: codecs.md
+  #   - Compras de activos: aftbuys.md
+  #   - Activos: aft.md
+  #   - Exportar al Versat: export.md
+  #   - Depreciaci&oacute;n: reparation.md
+  #   - Fecha del sistema: sistemdate.md
   - Ayuda:
     - Autores: about/authors.md
     - Sobre:  about/about.md
