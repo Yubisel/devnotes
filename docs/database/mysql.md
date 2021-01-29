@@ -26,3 +26,15 @@ flush privileges;
 $cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
 ```
 Se descomenta en las 2 líneas que aparece y luego para que los cambios tengan efecto se debe reiniciar el apache
+
+## Cambiar la collations a todas las tablas
+
+Cambiar dbase por el nombre de la bd luego ejecutar los script que da la consulta como resultado
+```sql
+SELECT CONCAT('ALTER TABLE `', 
+        tbl.`TABLE_SCHEMA`, '`.`', 
+        tbl.`TABLE_NAME`, 
+        '` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;') 
+FROM `information_schema`.`TABLES` tbl 
+WHERE tbl.`TABLE_SCHEMA` = 'dbase';
+```
