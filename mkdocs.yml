@@ -28,6 +28,7 @@ nav:
       - Dates: programming_languages/php/dates.md
   - Database:
     - MySql: database/mysql.md
+    - SQL Server: database/sql_server.md
   - Operating systems:
     - Ubuntu:
       - Clipboard: operating_systems/ubuntu/clipboard.md
@@ -36,6 +37,9 @@ nav:
       - Enable version selection in the installer: operating_systems/windows/enable_version_selection_in_the_installer.md
   - ToDo:
     - Films to watch: todo/films_to_watch.md
+
+  - Links:
+    - Images: links/images.md
 
   - Help:
     - MkDocs: about/mkdocs.md
