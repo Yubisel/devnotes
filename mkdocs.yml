@@ -30,7 +30,8 @@ nav:
     - MySql: database/mysql.md
   - Operating systems:
     - Ubuntu:
-      - Clipboard: ubuntu/clipboard.md
+      - Clipboard: operating_systems/ubuntu/clipboard.md
+      - Rename several files from console: operating_systems/ubuntu/rename_several_files_from_console.md
     # - Windows:
   - ToDo:
     - Films to watch: todo/films_to_watch.md

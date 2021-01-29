@@ -17,7 +17,7 @@ update user set plugin='mysql_native_password' where user='root';
 flush privileges;
 ```
 
-## Permitir en el phpmyadmin entrar sin password 
+## Permitir en el phpmyadmin entrar sin password
 
 ```php
 // Ubicacion del fichero en el sistema (Ubuntu)
