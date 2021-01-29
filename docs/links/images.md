@@ -8,3 +8,6 @@
 - [123rf](https://www.123rf.com/)
 - [Wallhaven](https://wallhaven.cc/)
 - [Undraw](https://undraw.co/)
+- [Flaticon](https://www.flaticon.com/)
+- [Freepik](https://www.freepik.es/)
+- [svgporn](https://svgporn.com/)
