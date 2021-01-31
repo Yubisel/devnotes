@@ -31,6 +31,10 @@ nav:
     - MySql: database/mysql.md
     - SQL Server: database/sql_server.md
 
+  - Apache:
+    - General: apache/general.md
+    - Permisos: apache/permits.md
+
   - Operating systems:
     - Ubuntu:
       - Clipboard: operating_systems/ubuntu/clipboard.md
