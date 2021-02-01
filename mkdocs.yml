@@ -44,6 +44,7 @@ nav:
       - Rename several files from console: operating_systems/ubuntu/rename_several_files_from_console.md
     - Windows:
       - Enable version selection in the installer: operating_systems/windows/enable_version_selection_in_the_installer.md
+      - Install .NET Framework 3.5 via DISM: operating_systems/windows/install_net_framework.md
   
   - Commands:
     - ssh: 
