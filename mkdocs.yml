@@ -35,6 +35,9 @@ nav:
     - General: apache/general.md
     - Permisos: apache/permits.md
 
+  - Docker:
+    - Docker: docker/docker.md
+
   - Operating systems:
     - Ubuntu:
       - Clipboard: operating_systems/ubuntu/clipboard.md
