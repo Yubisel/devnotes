@@ -23,9 +23,10 @@ theme:
 
 nav:
   - Home: index.md
-  - Programming languages:
+  - Programming:
     - PHP:
-      - Dates: programming_languages/php/dates.md
+      - Dates: programming/php/dates.md
+    - Composer: programming/composer/composer.md
 
   - Database:
     - MySql: database/mysql.md
