@@ -42,14 +42,17 @@ nav:
     - Ubuntu:
       - Clipboard: operating_systems/ubuntu/clipboard.md
       - Rename several files from console: operating_systems/ubuntu/rename_several_files_from_console.md
+      - Procesos: operating_systems/ubuntu/top_process.md
     - Windows:
       - Enable version selection in the installer: operating_systems/windows/enable_version_selection_in_the_installer.md
       - Install .NET Framework 3.5 via DISM: operating_systems/windows/install_net_framework.md
   
-  - Commands:
+  - Commands/Bash programs:
     - ssh: 
       - ssh: commands/ssh/ssh.md
       - copy_the_public_key: commands/ssh/copy_the_public_key.md
+    - dd: commands/dd.md
+    - pwgen: commands/pwgen.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
