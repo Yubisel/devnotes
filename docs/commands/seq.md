@@ -1,0 +1,35 @@
+# seq
+
+Generar secuencias de números en consola
+
+NAME
+       seq - print a sequence of numbers
+
+SYNOPSIS
+       seq [OPTION]... LAST
+       seq [OPTION]... FIRST LAST
+       seq [OPTION]... FIRST INCREMENT LAST
+
+DESCRIPTION
+       Print numbers from FIRST to LAST, in steps of INCREMENT.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -f, --format=FORMAT
+              use printf style floating-point FORMAT
+
+       -s, --separator=STRING
+              use STRING to separate numbers (default: \n)
+
+       -w, --equal-width
+              equalize width by padding with leading zeroes
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       If  FIRST  or INCREMENT is omitted, it defaults to 1.  That is, an omitted INCREMENT defaults to 1 even when LAST is smaller than FIRST.  The sequence of numbers ends when the sum of the current number and INCRE‐
+       MENT would become greater than LAST.  FIRST, INCREMENT, and LAST are interpreted as floating point values.  INCREMENT is usually positive if FIRST is smaller than LAST, and INCREMENT is usually negative if  FIRST
+       is  greater  than LAST.  INCREMENT must not be 0; none of FIRST, INCREMENT and LAST may be NaN.  FORMAT must be suitable for printing one argument of type 'double'; it defaults to %.PRECf if FIRST, INCREMENT, and
+       LAST are all fixed point decimal numbers with maximum precision PREC, and to %g otherwise.
