@@ -27,6 +27,8 @@ nav:
     - PHP:
       - Dates: programming/php/dates.md
     - Composer: programming/composer/composer.md
+    - React:
+      - Newline to break (nl2br): programming/react/newline_to_break.md
 
   - Database:
     - MySql: database/mysql.md
@@ -61,6 +63,7 @@ nav:
     - pwgen: commands/pwgen.md
     - seq: commands/seq.md
     - ncdu: commands/ncdu.md
+    - grep: commands/directory_word_search.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
