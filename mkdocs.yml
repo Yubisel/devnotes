@@ -43,6 +43,7 @@ nav:
 
   - Operating systems:
     - Linux:
+      - Gnome: operating_systems/linux/gnome/extensions.md
       - Estructura de ficheros: operating_systems/linux/estructura_de_directorios.md
 
     - Ubuntu:
@@ -63,7 +64,7 @@ nav:
     - pwgen: commands/pwgen.md
     - seq: commands/seq.md
     - ncdu: commands/ncdu.md
-    - grep: commands/directory_word_search.md
+    - grep: commands/grep/directory_word_search.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
