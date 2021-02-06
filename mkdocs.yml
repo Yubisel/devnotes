@@ -39,7 +39,9 @@ nav:
     - Permisos: apache/permits.md
 
   - Docker:
-    - Docker: docker/docker.md
+    - Docker:
+      - notas: docker/docker_notes.md
+      - install: docker/docker_install.md
 
   - Operating systems:
     - Linux:
@@ -65,6 +67,10 @@ nav:
     - seq: commands/seq.md
     - ncdu: commands/ncdu.md
     - grep: commands/grep/directory_word_search.md
+    - jq: commands/jq.md
+    - mktemp: commands/mktemp.md
+    - tar: commands/tar.md
+    - others: commands/others.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
