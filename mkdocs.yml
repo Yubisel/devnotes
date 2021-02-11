@@ -29,6 +29,8 @@ nav:
     - Composer: programming/composer/composer.md
     - React:
       - Newline to break (nl2br): programming/react/newline_to_break.md
+    - bash:
+      - bash examples: programming/bash/30_bash_examples.md
 
   - Database:
     - MySql: database/mysql.md
@@ -70,6 +72,7 @@ nav:
     - jq: commands/jq.md
     - mktemp: commands/mktemp.md
     - tar: commands/tar.md
+    - commands/uniq.md
     - others: commands/others.md
 
   - ToDo:
