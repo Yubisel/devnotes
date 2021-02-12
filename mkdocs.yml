@@ -26,6 +26,7 @@ nav:
   - Programming:
     - PHP:
       - Dates: programming/php/dates.md
+      - Fechas en aplicacion desde varios lugares del mundo: programming/php/global_dates.md
     - Composer: programming/composer/composer.md
     - React:
       - Newline to break (nl2br): programming/react/newline_to_break.md
@@ -49,6 +50,7 @@ nav:
     - Linux:
       - Gnome: operating_systems/linux/gnome/extensions.md
       - Estructura de ficheros: operating_systems/linux/estructura_de_directorios.md
+      - CDPATH: operating_systems/linux/cdpath.md
 
     - Ubuntu:
       - Clipboard: operating_systems/ubuntu/clipboard.md
