@@ -32,6 +32,13 @@ nav:
       - Newline to break (nl2br): programming/react/newline_to_break.md
     - bash:
       - bash examples: programming/bash/30_bash_examples.md
+    - python:
+      - rangos: programming/python/rangos.md
+      - listas: programming/python/listas.md
+      - tuplas: programming/python/tuplas.md
+      - diccionarios: programming/python/diccionarios.md
+    - html:
+      - Text tags: programming/html/text_tags.md
 
   - Database:
     - MySql: database/mysql.md
