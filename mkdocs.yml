@@ -27,6 +27,8 @@ nav:
     - PHP:
       - Dates: programming/php/dates.md
       - Fechas en aplicacion desde varios lugares del mundo: programming/php/global_dates.md
+      - Pretty format arrays and objects: programming/php/pretty.md
+      - Constants: programming/php/constants.md
     - Composer: programming/composer/composer.md
     - React:
       - Newline to break (nl2br): programming/react/newline_to_break.md
@@ -39,6 +41,9 @@ nav:
       - diccionarios: programming/python/diccionarios.md
     - html:
       - Text tags: programming/html/text_tags.md
+
+  - Technologies:
+    - ionic: technologies/ionic/ionic.md
 
   - Database:
     - MySql: database/mysql.md
