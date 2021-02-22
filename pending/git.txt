@@ -1,0 +1,24 @@
+//Mostrar grafica de commits en consola
+git log --branches --remotes --tags --graph --oneline --decorate
+
+
+//cambios locales que no se han subido al server
+git log --branches --not --remotes=origin
+
+
+
+git log --reverse --pretty=format:'"%h":{%n "parents":"%p",%n "message":"%s",%n "dat":"%cr",%n "name":"%an"%n},'
+
+
+
+//exportar de una revision a otra en git
+for /f "usebackq tokens=*" %A in (`git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT 441dc870f52ee04068a5aba6a2c4acd1d6840ffe HEAD`) do echo FA|xcopy "%~fA" "C:\git_changed_files\%A"
+
+
+//guardar las credenciales del git para que no las pida cada vez que se valla a trabajar con algun remote
+git config --global credential.helper store
+
+
+// definir usuario y email para los commits 
+git config --global user.email "yubiselv@gmail.com"
+git config --global user.name "Ing. Yubisel Vega Alvarez"
