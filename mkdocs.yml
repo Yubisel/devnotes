@@ -58,18 +58,23 @@ nav:
       - notas: docker/docker_notes.md
       - install: docker/docker_install.md
 
+  - git: git/git.md
+
   - Operating systems:
     - Linux:
+      - bash: operating_systems/linux/bash/ps1.md
       - Gnome: operating_systems/linux/gnome/extensions.md
       - Estructura de ficheros: operating_systems/linux/estructura_de_directorios.md
       - CDPATH: operating_systems/linux/cdpath.md
 
     - Ubuntu:
+      - My config: operating_systems/ubuntu/my_config.md
       - Clipboard: operating_systems/ubuntu/clipboard.md
       - Rename several files from console: operating_systems/ubuntu/rename_several_files_from_console.md
       - Procesos: operating_systems/ubuntu/top_process.md
       - lamp: operating_systems/ubuntu/lamp.md
       - apache: operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache.md
+      - Splash screen: operating_systems/ubuntu/ubuntu_splash_screen.md
     - Windows:
       - Enable version selection in the installer: operating_systems/windows/enable_version_selection_in_the_installer.md
       - Install .NET Framework 3.5 via DISM: operating_systems/windows/install_net_framework.md
