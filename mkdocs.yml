@@ -94,8 +94,8 @@ nav:
     - phpmyadmin: programs/phpmyadmin.md
     - Flameshot: programs/flameshot.md
     - Apache:
-      - General: apache/general.md
-      - Permisos: apache/permits.md
+      - General: programs/apache/general.md
+      - Permisos: programs/apache/permits.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
