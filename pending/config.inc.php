@@ -1,4 +1,0 @@
-<?php
-
-$cfg['AllowArbitraryServer'] = true;
-

@@ -18,7 +18,6 @@ por revisar
 git log --reverse --pretty=format:'"%h":{%n "parents":"%p",%n "message":"%s",%n "dat":"%cr",%n "name":"%an"%n},'
 ```
 
-
 ## Exportar de una revisión a otra en git
 
 Este comando es sobre el cmd de windows

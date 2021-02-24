@@ -49,10 +49,6 @@ nav:
     - MySql: database/mysql.md
     - SQL Server: database/sql_server.md
 
-  - Apache:
-    - General: apache/general.md
-    - Permisos: apache/permits.md
-
   - Docker:
     - Docker:
       - notas: docker/docker_notes.md
@@ -93,6 +89,13 @@ nav:
     - tar: commands/tar.md
     - commands/uniq.md
     - others: commands/others.md
+
+  - Programs:
+    - phpmyadmin: programs/phpmyadmin.md
+    - Flameshot: programs/flameshot.md
+    - Apache:
+      - General: apache/general.md
+      - Permisos: apache/permits.md
 
   - ToDo:
     - Films to watch: todo/films_to_watch.md
