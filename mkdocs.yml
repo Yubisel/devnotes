@@ -32,6 +32,7 @@ nav:
     - Composer: programming/composer/composer.md
     - React:
       - Newline to break (nl2br): programming/react/newline_to_break.md
+      - Github pages: programming/react/github_pages.md
     - bash:
       - bash examples: programming/bash/30_bash_examples.md
     - python:
