@@ -1,6 +1,9 @@
 site_name: '&#60;dev notes/&#62;'
 site_url: https://yubisel.gitlab.io
 site_dir: public
+google_analytics:
+  - G-ZL42PV39K3
+  - auto
 theme:
   name: material
   language: en
