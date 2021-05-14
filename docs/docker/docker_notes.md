@@ -247,3 +247,17 @@ Asignar ip a contenedor
 ```bash
 -docker run --network <nombreRed> --ip <ip>  -d --name <nombreContainer> <imagen>
 ```
+
+### Salvar en fichero una imagen
+
+Util cuando se quiere compartir una imagen sin depender de docker hub o un repositorio alojado en la nube, se comprime la imagen y se comparte como un fichero
+
+```bash
+docker save myusername/myproject:latest | gzip -c > myproject_img_bak20141103.tgz
+```
+
+Forma de cargarla en la pc destino 
+
+```bash
+gunzip -c myproject_img_bak20141103.tgz | docker load
+```
