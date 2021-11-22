@@ -1,6 +1,6 @@
 ![Build Status](https://gitlab.com/pages/mkdocs/badges/master/build.svg)
 
-[[http](https://yubisel.gitlab.io/mkdocs/)](https://yubisel.gitlab.io/mkdocs/)
+[[http](https://yubisel.gitlab.io/devnotes/)](https://yubisel.gitlab.io/devnotes/)
 
 ---
 
