@@ -27,6 +27,11 @@ theme:
 nav:
   - Home: index.md
   - Programming:
+    - Javascript:
+      - Map: programming/javascript/map.md
+      - Set: programming/javascript/set.md
+    - npm:
+      - Dependency Cruiser: programming/node/dependency_cruiser.md
     - PHP:
       - Dates: programming/php/dates.md
       - Fechas en aplicacion desde varios lugares del mundo: programming/php/global_dates.md
