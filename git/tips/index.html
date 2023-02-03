@@ -1,0 +1,2667 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yubisel.gitlab.io/git/tips/">
+      
+      
+        <link rel="prev" href="../git/">
+      
+      
+        <link rel="next" href="../../operating_systems/linux/bash/ps1/">
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
+    
+    
+      
+        <title>tips 2 - &#60;dev notes/&#62;</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tips" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="&amp;#60;dev notes/&amp;#62;" class="md-header__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            &#60;dev notes/&#62;
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              tips 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/yubisel/mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yubisel.gitlab.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="&amp;#60;dev notes/&amp;#62;" class="md-nav__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    &#60;dev notes/&#62;
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/yubisel/mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yubisel.gitlab.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/javascript/map/" class="md-nav__link">
+        Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/javascript/set/" class="md-nav__link">
+        Set
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          npm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          npm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/node/dependency_cruiser.md" class="md-nav__link">
+        Dependency Cruiser
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/php/dates/" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/php/global_dates/" class="md-nav__link">
+        Fechas en aplicacion desde varios lugares del mundo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/php/pretty/" class="md-nav__link">
+        Pretty format arrays and objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/php/constants/" class="md-nav__link">
+        Constants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/composer/composer/" class="md-nav__link">
+        Composer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/react/newline_to_break/" class="md-nav__link">
+        Newline to break (nl2br)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/react/github_pages/" class="md-nav__link">
+        Github pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          bash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          bash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/bash/30_bash_examples/" class="md-nav__link">
+        bash examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+          python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python/rangos/" class="md-nav__link">
+        rangos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python/listas/" class="md-nav__link">
+        listas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python/tuplas/" class="md-nav__link">
+        tuplas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python/diccionarios/" class="md-nav__link">
+        diccionarios
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+          html
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/html/text_tags/" class="md-nav__link">
+        Text tags
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Technologies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Technologies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technologies/ionic/ionic/" class="md-nav__link">
+        ionic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/mysql/" class="md-nav__link">
+        MySql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/sql_server/" class="md-nav__link">
+        SQL Server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_notes/" class="md-nav__link">
+        notas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_install/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          tips 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        tips 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#merge-my-local-changes-with-another-branch" class="md-nav__link">
+    Merge my local changes with another branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-commit-before-pushing-changes" class="md-nav__link">
+    Undo commit before pushing changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recover-a-deleted-branch" class="md-nav__link">
+    Recover a deleted branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-the-commits-that-have-deleted-files" class="md-nav__link">
+    Display the commits that have deleted files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebase-my-branch-with-master" class="md-nav__link">
+    Rebase my branch with master
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore-a-deleted-file" class="md-nav__link">
+    Restore a deleted file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discard-local-file-changes" class="md-nav__link">
+    Discard local file changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear-all-stashed-states" class="md-nav__link">
+    Clear all stashed states
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-untracked-files-and-folders" class="md-nav__link">
+    Remove untracked files and folders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-a-commit-message-before-pushing" class="md-nav__link">
+    Undo a commit message before pushing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-commits-by-author" class="md-nav__link">
+    Display commits by author
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-for-a-specific-commit-message-in-all-commits" class="md-nav__link">
+    Search for a specific commit message in all commits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-a-commit-message-after-pushing" class="md-nav__link">
+    Undo a commit message after pushing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-two-or-more-commits" class="md-nav__link">
+    Combine two or more commits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-a-file-from-git-but-keep-the-local-file" class="md-nav__link">
+    Remove a file from git but keep the local file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compare-an-old-revision-of-a-file" class="md-nav__link">
+    Compare an old revision of a file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#squash-feature-branch-commits-to-merge-into-the-release-branch" class="md-nav__link">
+    Squash feature branch commits to merge into the release branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-to-a-certain-commit-in-history" class="md-nav__link">
+    Reset to a certain commit in history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#untrack-files-that-already-exist" class="md-nav__link">
+    Untrack files that already exist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recover-a-deleted-tag" class="md-nav__link">
+    Recover a deleted tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-uncommited-changes-to-a-new-branch" class="md-nav__link">
+    Move uncommited changes to a new branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-locally-created-branch-to-remote" class="md-nav__link">
+    Push locally created branch to remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recover-stashed-changes" class="md-nav__link">
+    Recover stashed changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rename-my-local-and-remote-branch" class="md-nav__link">
+    Rename my local and remote branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-a-commit-after-pushing-it-to-master" class="md-nav__link">
+    Undo a commit after pushing it to master
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unstage-a-file" class="md-nav__link">
+    Unstage a file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-remote-branch" class="md-nav__link">
+    Delete remote branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-number-of-commits-from-each-contributor" class="md-nav__link">
+    Show number of commits from each contributor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-all-the-commits-to-one-file" class="md-nav__link">
+    Show all the commits to one file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-command-aliass-in-your-cli" class="md-nav__link">
+    Use command alias's in your CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark-a-conflict-file-as-resolved" class="md-nav__link">
+    Mark a conflict file as resolved
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-all-unpushed-commits" class="md-nav__link">
+    Display all unpushed commits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rename-a-git-tag" class="md-nav__link">
+    Rename a git tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-old-remote-git-branches" class="md-nav__link">
+    Remove old remote git branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-specific-submodule" class="md-nav__link">
+    Update a specific submodule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-deleted-files" class="md-nav__link">
+    Stage deleted files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-recent-commits-to-a-new-branch" class="md-nav__link">
+    Move recent commits to a new branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-all-remote-branches" class="md-nav__link">
+    Show all remote branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-all-files-changed-in-a-commit" class="md-nav__link">
+    List all files changed in a commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkout-a-file-from-a-different-branch" class="md-nav__link">
+    Checkout a file from a different branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-contents-of-a-file-at-a-specific-commit" class="md-nav__link">
+    Show contents of a file at a specific commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-repository-without-getting-the-entire-history" class="md-nav__link">
+    Clone a repository without getting the entire history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-remote-repository" class="md-nav__link">
+    Add a remote repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-all-remote-branches" class="md-nav__link">
+    List all remote branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-information-about-a-remote-branch" class="md-nav__link">
+    Show information about a remote branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-specified-tag" class="md-nav__link">
+    Delete specified tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-a-submodule" class="md-nav__link">
+    Remove a submodule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compare-commit-log-difference-between-2-branches" class="md-nav__link">
+    Compare commit log difference between 2 branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-untracked-files-within-untracked-directories" class="md-nav__link">
+    List untracked files within untracked directories
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Operating systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Operating systems
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/linux/bash/ps1/" class="md-nav__link">
+        bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/linux/gnome/extensions/" class="md-nav__link">
+        Gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/linux/estructura_de_directorios/" class="md-nav__link">
+        Estructura de ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/linux/cdpath/" class="md-nav__link">
+        CDPATH
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          Ubuntu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ubuntu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/my_config/" class="md-nav__link">
+        My config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/clipboard/" class="md-nav__link">
+        Clipboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/rename_several_files_from_console/" class="md-nav__link">
+        Rename several files from console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/top_process/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/lamp/" class="md-nav__link">
+        lamp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache/" class="md-nav__link">
+        apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/ubuntu/ubuntu_splash_screen/" class="md-nav__link">
+        Splash screen
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/windows/enable_version_selection_in_the_installer/" class="md-nav__link">
+        Enable version selection in the installer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating_systems/windows/install_net_framework/" class="md-nav__link">
+        Install .NET Framework 3.5 via DISM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Commands/Bash programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Commands/Bash programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          ssh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          ssh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/ssh/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/ssh/copy_the_public_key/" class="md-nav__link">
+        Copy the public key to server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/dd/" class="md-nav__link">
+        dd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/pwgen/" class="md-nav__link">
+        pwgen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/seq/" class="md-nav__link">
+        seq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/ncdu/" class="md-nav__link">
+        ncdu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/grep/directory_word_search/" class="md-nav__link">
+        grep
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/jq/" class="md-nav__link">
+        jq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/mktemp/" class="md-nav__link">
+        mktemp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/tar/" class="md-nav__link">
+        tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/uniq/" class="md-nav__link">
+        uniq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/others/" class="md-nav__link">
+        others
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programs/phpmyadmin/" class="md-nav__link">
+        phpmyadmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programs/flameshot/" class="md-nav__link">
+        Flameshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+          Apache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programs/apache/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programs/apache/permits/" class="md-nav__link">
+        Permisos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          ToDo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          ToDo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/films_to_watch/" class="md-nav__link">
+        Films to watch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/others/" class="md-nav__link">
+        Others
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/api/" class="md-nav__link">
+        api
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          Help
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Help
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/mkdocs/" class="md-nav__link">
+        MkDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="tips">Tips</h1>
+<p><a href="https://firstaidgit.io/">https://firstaidgit.io/</a></p>
+<h2 id="merge-my-local-changes-with-another-branch">Merge my local changes with another branch</h2>
+<h3 id="modify-undo-commit-after-push-reset">modify undo commit after push reset</h3>
+<p>This can be done while a regular <code>merge</code>, and you should <em>keep your merge history</em> by making sure to use <code>--no-ff</code>, which means <em>no fast forward</em>. </p>
+<p>Switch to the branch you're merging against, make sure it's up to date, and merge: </p>
+<p><code>git merge &lt;the-other-branch&gt; --no-ff</code> </p>
+<p>You should get a commit message with the <code>merge X into Y branch</code>, anthen you can safely push your merge.&gt;</p>
+<h2 id="undo-commit-before-pushing-changes">Undo commit before pushing changes</h2>
+<h3 id="modify-undo-commit-local-before-push-reset">modify undo commit local before push reset</h3>
+<p>If you made a commit that you wish to modify or erase entirely, the git <code>reset</code> command can be of help here. </p>
+<p><code>git reset HEAD~1 # undo last commit, keep the changes</code> </p>
+<p><code>git reset --hard HEAD~1 #undo last commit, erase the changes</code> </p>
+<p>Naturally, be careful when using the last option as your local files will be discarded! </p>
+<p>To keep the samcommit message:</p>
+<p><code>git commit -a -c ORIG_HEAD</code></p>
+<p>You will be prompted with your last commit message. </p>
+<p>Tips from <a href="https://github.com/hrbonz">hrbonz</a> </p>
+<h2 id="recover-a-deleted-branch">Recover a deleted branch</h2>
+<h3 id="recover-deleted-branch">recover deleted branch"</h3>
+<p>By typing <code>git reflog</code>, you can grab the commit hash (SHA1) at the top of your deleted branch. Copy this <code>sha</code>, then use: </p>
+<p><code>git checkout &lt;sha&gt;</code> </p>
+<p>Once you've done that, recover the branch by typing: </p>
+<p><code>git checkout -b &lt;branchname&gt;</code></p>
+<p>git reflog</p>
+<h2 id="display-the-commits-that-have-deleted-files">Display the commits that have deleted files</h2>
+<h3 id="display-show-deleted-files-history">display show deleted files history</h3>
+<p>You can quickly check which commits included deleted files by using the following command: </p>
+<p><code>git log --diff-filter=D --summary</code> </p>
+<p>This will show you the commits in which files were removed.</p>
+<h2 id="rebase-my-branch-with-master">Rebase my branch with master</h2>
+<h3 id="rebase-branch-against-master-changes">rebase branch against master changes</h3>
+<p>To catch-up with the latest changes from master (or any other branch you started from), you can and should rebase against it. Say you're working on the <code>foobar</code> branch: </p>
+<p><code>git checkout foobar</code> </p>
+<p>Followed by a rebase: </p>
+<p><code>git rebase master</code> </p>
+<p>This applies the <code>origin</code> commits on top of master. When you're done with solving conflicts, continuby using <code>git rebase --continue</code>. At this point you can continue to work on your branch or merge it against master. </p>
+<p>Learn more about <a href="https://github.com/k88hudson/git-flight-rules#i-need-to-combine-commits">rebases</a></p>
+<h2 id="restore-a-deleted-file">Restore a deleted file</h2>
+<h3 id="restore-recover-deleted-file">restore recover deleted file</h3>
+<p>If you deleted a file by accident, you can get it back by checking it out again: </p>
+<p><code>git checkout myFile.txt</code> </p>
+<p>If you need to restore a file from a certain point in time in your commit history, grab the hash of that commit and run: </p>
+<p><code>git checkout $commit~1 myFile.txt</code></p>
+<h2 id="discard-local-file-changes">Discard local file changes</h2>
+<h3 id="revert-changes-reset-file-specific-version">revert changes reset file specific version</h3>
+<p>The easiest way to get rid of unwanted changes is by resetting a file or a folder to the current commit state. To do so, you can use </p>
+<p><code>git checkout myFile.txt</code> </p>
+<p>You can also reset a specific path instead: </p>
+<p><code>git checkout -- myPath</code></p>
+<h2 id="clear-all-stashed-states">Clear all stashed states</h2>
+<h3 id="clear-stash">clear stash</h3>
+<p>You can clear all stashed states by using: </p>
+<p><code>git stash clear</code></p>
+<h2 id="remove-untracked-files-and-folders">Remove untracked files and folders</h2>
+<h3 id="remove-clear-untracked-files">remove clear untracked files"</h3>
+<p>To remove all untracked files from your working copy: </p>
+<p><code>git clean -f</code> </p>
+<p>To remove all untracked files and folders: </p>
+<p><code>git clean -fd</code> </p>
+<p>Tip: If you'd like to see first which files will be untracked before actually removing them, you can do a safe clean test by running: </p>
+<p><code>git clean -n</code></p>
+<p>git clean</p>
+<h2 id="undo-a-commit-message-before-pushing">Undo a commit message before pushing</h2>
+<h3 id="undo-commit-message-before-pushing-amend">undo commit message before pushing amend</h3>
+<p>You can amend your commit message by typing <code>git commit --amend</code>, which will open your editor and allow you to make changes to the most recent commit message. </p>
+<p>You can also modify the message directly, by using: </p>
+<p><code>git commit --amend -m \"My new awesome message\"</code></p>
+<h2 id="display-commits-by-author">Display commits by author</h2>
+<h3 id="display-show-commits-by-author-name">display show commits by author name"</h3>
+<p>You can filter the commit history by author by using: </p>
+<p><code>git log --author=\"AuthorName\"</code></p>
+<p>git log author</p>
+<h2 id="search-for-a-specific-commit-message-in-all-commits">Search for a specific commit message in all commits</h2>
+<h3 id="search-commit-message-regexp-log-find">search commit message regexp log find</h3>
+<p>You can search for a specific commit log by matching it on a regular expression. Use: </p>
+<p><code>git log --grep &lt;your-query&gt;</code></p>
+<h2 id="undo-a-commit-message-after-pushing">Undo a commit message after pushing</h2>
+<h3 id="undo-commit-message-after-pushing-amend">undo commit message after pushing amend</h3>
+<p>This is a two-step process. You need to amend your commit message by using <code>git commit --amend</code>, and then you re-write your branch commit history by force pushing the commit: <code>git push &lt;remote&gt; &lt;branch&gt; --force</code> </p>
+<p><strong>Warning:</strong> by force pushing, you can lose the remote branch commits if your local branch is not up to date, so be careful.</p>
+<h2 id="combine-two-or-more-commits">Combine two or more commits</h2>
+<h3 id="combine-commits-join-rebase">combine commits join rebase"</h3>
+<p>You will need to use an interactive rebase. If you're rebasing against master, start the process by typing <code>git rebase -i master</code>. However, if you're not rebasing against a branch, you'll need to rebase against your <code>HEAD</code>.</p>
+<p>If you want to squash your last 2 commits, you can use: </p>
+<p><code>git rebase -i HEAD~2</code>.</p>
+<p>You will then be prompted to folloinstructions to pick commits. If you wish to combine all your commits with the oldest <em>first</em> commit, leave the first line with <code>pick</code> and change the letter to <code>f</code> on all other commits. Learn more about <a href="https://github.com/k88hudson/git-flight-rules#i-need-to-combine-commits">rebases</a> </p>
+<p>git rebase</p>
+<h2 id="remove-a-file-from-git-but-keep-the-local-file">Remove a file from git but keep the local file</h2>
+<h3 id="remove-file-from-git-delete">remove file from git delete</h3>
+<p>This will remove the file your your git tracking, but keep your local copy:</p>
+<p><code>git rm --cached myfile.txt</code></p>
+<h2 id="compare-an-old-revision-of-a-file">Compare an old revision of a file</h2>
+<h3 id="compare-old-revision-file">compare old revision file"</h3>
+<p>You can easily view the contents of a file at a specific point in time by using: </p>
+<p><code>git show commitHash:myFile.txt</code></p>
+<p>git show</p>
+<h2 id="squash-feature-branch-commits-to-merge-into-the-release-branch">Squash feature branch commits to merge into the release branch</h2>
+<h3 id="squash-combine-commits-feature-merge-update-release">squash combine commits feature merge update release"</h3>
+<p>If you decide to merge and squash your commits, this will create a new commit but only in the release branch, therefore the history of the feature branch will remain intact. </p>
+<p>Here's an example on how to achieve this: </p>
+<p><code>git fetch origin</code> </p>
+<p><code>git checkout [release-branch]</code> </p>
+<p><code>git rebase origin/[release-branch]</code> </p>
+<p><code>git merge —squas—no-commit [feature-branch]</code> </p>
+<p><code>git commit -m 'Merge X into Y'</code> </p>
+<p>You'll end up with one commit only in your release branch, while keeping the feature history intact. </p>
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">Learn more about feature branches</a></p>
+<p>git squash</p>
+<h2 id="reset-to-a-certain-commit-in-history">Reset to a certain commit in history</h2>
+<h3 id="revert-reset-commit-certain-history">revert reset commit certain history</h3>
+<p>If you don't care about your local changes, you can reset back to one commit back in time by doing a hard reset: </p>
+<p><code>git reset --hard HEAD~1</code> </p>
+<p>This will set the HEAD back by one commit. You can also do this using the commit hash instead.</p>
+<h2 id="untrack-files-that-already-exist">Untrack files that already exist</h2>
+<h3 id="untrack-remove-files-already-exist-there">untrack remove files already exist there</h3>
+<p>If you want to untrack a file that already exists in the repo but would still like to keep it locally, commit your changes and run: </p>
+<p><code>git rm -r --cached</code> </p>
+<p>This will remove changed files from the staging area. Afterwards, just run a normal: </p>
+<p><code>git add .</code> and commit your changes.</p>
+<h2 id="recover-a-deleted-tag">Recover a deleted tag</h2>
+<h3 id="recover-undo-deleted-tag-accident">recover undo deleted tag accident</h3>
+<p>If you want to recover a tag deleted by accident, start by grabbing it: </p>
+<p><code>git fsck --unreachable | grep tag</code> </p>
+<p>Once you found it, you can restore it: </p>
+<p><code>git update-ref refs/tags/NAME KEY</code> </p>
+<p><a href="http://java.dzone.com/articles/git-tip-restore-deleted-tag">Source</a></p>
+<h2 id="move-uncommited-changes-to-a-new-branch">Move uncommited changes to a new branch</h2>
+<h3 id="create-new-branch-keep-changes">create new branch keep changes</h3>
+<p>Too often we start changing files on a branch to fix something, only then realising we didn't create a new branch before. Luckily, this is as simple as creating a new branch: </p>
+<p><code>git checkout -b my-new-branch-name</code> </p>
+<p>This will bring any files from your current branch into the new one, which you can commit then.</p>
+<h2 id="push-locally-created-branch-to-remote">Push locally created branch to remote</h2>
+<h3 id="push-local-branch-remote">push local branch remote</h3>
+<p>If you've created a local branch but now want it to be tracked on the remote you can run: </p>
+<p><code>git push -u origin my-new-branch-name</code> </p>
+<p>Now everyone can checkout to your branch.</p>
+<h2 id="recover-stashed-changes">Recover stashed changes</h2>
+<h3 id="recover-stash-stash-changes-stashed">recover stash stash@ changes stashed"</h3>
+<p>If you still have your changes stashed, you can apply them onto your branch by using <code>git stash apply</code>. You can run <code>git diff</code> to compare the differences. To get rid of the stash afterwards run: </p>
+<p><code>git stash drop</code> </p>
+<p>If you have more than one stash, find the one you need by running: </p>
+<p><code>git stash list</code> and applying it by referencing its index</p>
+<p><code>git stash@{1}</code> </p>
+<p>Keep in mind that this is zero-based (<code>stash@{0}</code> is the first one) </p>
+<p><a href="http://stackoverflow.com/q/19003009">Read more about stashes</a></p>
+<p>git checkout stash</p>
+<h2 id="rename-my-local-and-remote-branch">Rename my local and remote branch</h2>
+<h3 id="rename-wrong-name-branch">rename wrong name branch</h3>
+<p>Let’s say you have a <em>“fix-bug25”</em> branch, and you want to rename it to <em>“hotfix-users”</em>. First, change the local branch: </p>
+<p><code>git branch -m fix-bug25 hotfix-users</code> </p>
+<p>Now, the remote branch: you can’t rename the branch directly, so you’ll need to delete it and push it again with the new name. Make sure no one else within your team is working on itDelete the branch: <code>git push origin --delete fix-bug25</code> </p>
+<p>And now let's push the new one: <code>git push origin hotfix-users</code></p>
+<h2 id="undo-a-commit-after-pushing-it-to-master">Undo a commit after pushing it to master</h2>
+<h3 id="undo-revert-commit-pushed-after-push">undo revert commit pushed after push"</h3>
+<p>This will revert one or more commits that you want to erase from the remote branch. You can either specify one by hash: </p>
+<p><code>git revert b712c3c</code> </p>
+<p>Revert only the second to last commit: </p>
+<p><code>git revert HEAD^</code> </p>
+<p>Or undo the last commit without creating a revert commit: </p>
+<p><code>git revert -n HEAD</code> </p>
+<p>Tip: <code>HEAD~1</code> is a shortcut to <code>HEAD^</code>, themean the same thing. <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-revert">Learn more about git revert</a></p>
+<p>git revert</p>
+<h2 id="unstage-a-file">Unstage a file</h2>
+<h3 id="unstage-file-from-remove-commit">unstage file from remove commit</h3>
+<p>To unstage a file added by mistake, the easiest option would be: </p>
+<p><code>git reset HEAD unlovedFile.txt</code></p>
+<h3 id="committed-to-the-wrong-branc-commit-wrong-branch-master-accident">Committed to the wrong branc### commit wrong branch master accident</h3>
+<p>Start by switching to the new branch you forgot to create, by typing </p>
+<p><code>git checkout -b &lt;new-branch&gt;</code>. </p>
+<p>Switch back to the original branch now: </p>
+<p><code>git checkout &lt;original-branch&gt;</code> </p>
+<p>...and reset to the last commit you want to keep. </p>
+<p>To do so, you can type <code>git log</code> and save the hash (SHA1) of the last commit that you want to keep. Let'say this is <code>a31a45c</code>. </p>
+<p>Now you have to reset it: <code>git reset --hard a31a45c</code> and push this last forced reset. </p>
+<p><strong>Warning:</strong> Make sure no one has committed to that original branch in the meantime, or changes might be lost!</p>
+<h2 id="delete-remote-branch">Delete remote branch</h2>
+<h3 id="delete-remote-branch_1">delete remote branch</h3>
+<p>If you are positive this branch can be deleted, type: </p>
+<p><code>git push origin --delete branch-name</code></p>
+<p>ssuming that you have no changes that you want to save, this can be done with two easy commands. </p>
+<p>First let's get a fresh fetch of the remote: </p>
+<p><code>git fetch &lt;remoteBranchName&gt;</code>. </p>
+<p>Then let's tell git that we want to reset our local to the head of our remote branch like so: </p>
+<p><code>git reset --hard origin/&lt;localBranchName&gt;</code>. </p>
+<p>If you do hav### you wish to keep, you should check out a new branch and make a commit before resetting: <code>git commit -m \"just in case\"</code> </p>
+<p><code>git branch my-new-branch-name</code>"</p>
+<h3 id="reset-local-branch-to-match-remote">Reset local branch to match remote</h3>
+<p>reset local branch to match remote</p>
+<h2 id="show-number-of-commits-from-each-contributor">Show number of commits from each contributor</h2>
+<h3 id="show-number-commits">show number commits</h3>
+<p>Want to see how many commits everyone in your team has made? </p>
+<p><code>git shortlog -s -n</code> </p>
+<p>This will order the authors in decending order by number of commits made.</p>
+<h2 id="show-all-the-commits-to-one-file">Show all the commits to one file</h2>
+<h3 id="show-all-commits-file">show all commits file"</h3>
+<p>Ever wanted to see all the commits made to a single file? </p>
+<p><code>git log --follow -p -- myfile</code> </p>
+<p>This will show all the commits made to a single file. The <code>--follow</code> argument ensures that we can see commits made to that file even if it was under a different file name at the time. </p>
+<p>Omit the <code>-p</code> to just see the commit messages and not the commicontent.</p>
+<p>git log follow</p>
+<h2 id="use-command-aliass-in-your-cli">Use command alias's in your CLI</h2>
+<h3 id="command-alias">command alias</h3>
+<p>Getting fed up of typing <code>git status</code>? Well we can easily alias that command to something slightly quicker to type within git. </p>
+<p><code>git config --global alias.st status</code> </p>
+<p>Now all we have to type is <code>git st</code> </p>
+<p>We can take it a step further by aliasing more complicated commands to an alias: </p>
+<p><code>git config --global alias.logme 'log ---author=Rob'</code> </p>
+<p>Now we've aliased <code>git logme</code> to show all of our commits.</p>
+<h2 id="mark-a-conflict-file-as-resolved">Mark a conflict file as resolved</h2>
+<h3 id="conflict-mark-resolve-file">conflict mark resolve file"</h3>
+<p>To mark a file (or several) conflicted files as resolved so you can push the changes up, normally add these files: </p>
+<p><code>git add &lt;file&gt;</code> </p>
+<p>You can then type <code>git commit</code> to solve these conflicts and push the changes up. </p>
+<p>Suggested by Robert Wünsch.</p>
+<p>git add</p>
+<h2 id="display-all-unpushed-commits">Display all unpushed commits</h2>
+<h3 id="display-show-unpushed-commits">display show unpushed commits"</h3>
+<p>To view all the commits that are yet to be pushed to all branches, use the following command: </p>
+<p><code>git log --branches --not --remotes</code> </p>
+<p>Alternatively, you can also use: </p>
+<p><code>git log origin/master..HEAD</code></p>
+<p>git log</p>
+<h2 id="rename-a-git-tag">Rename a git tag</h2>
+<h3 id="rename-tag-name-change">rename tag name change"</h3>
+<p>To rename an existing tag: </p>
+<p><code>git tag &lt;newTag&gt; &lt;oldTag&gt;</code> </p>
+<p><code>git tag -d &lt;oldTag&gt;</code> </p>
+<p><code>git push origin :refs/tags/&lt;oldTag&gt;</code> </p>
+<p><code>git push --tags</code></p>
+<p>git tag</p>
+<h2 id="remove-old-remote-git-branches">Remove old remote git branches</h2>
+<h3 id="remove-old-prune-branch">remove old prune branch"</h3>
+<p>If a branch is removed on the remote, you can delete it from the local refs by using the <code>git-remote prune &lt;name&gt;</code> feature. </p>
+<p>This will delete the stale remote-tracking branch under <name>, where the stale branch has already been removed from the remote repository referenced by <name>, but are still locally available in <code>remotes/&lt;name&gt;</code>.</p>
+<p>git remote prune <remote></p>
+<h2 id="update-a-specific-submodule">Update a specific submodule</h2>
+<h3 id="update-submodule">update submodule"</h3>
+<p>To update a specific submodule in your repository, you should append the path to your submodule: </p>
+<p><code>git submodule update --remote --merge &lt;path&gt;</code> </p>
+<p>Suggested by Wouter Peschier.</p>
+<p>git submodule remote merge</p>
+<h2 id="stage-deleted-files">Stage deleted files</h2>
+<h3 id="stage-commit-deleted-files-folders">stage commit deleted files folders"</h3>
+<p>To stage for commit files or folders that you have deleted locally, you can use: </p>
+<p><code>git add -u</code> </p>
+<p>If you only want to stage the current path you're in, use: </p>
+<p><code>git add -u .</code></p>
+<p>git add -u</p>
+<h2 id="move-recent-commits-to-a-new-branch">Move recent commits to a new branch</h2>
+<h3 id="move-recent-commits-to-new-branch-last">move recent commits to new branch last"</h3>
+<p>Say you want to move the last 2 commits into a new, separate branch. You can do this by creating the branch, rolling back 2 commits and checking out the branch. So: </p>
+<p><code>git branch &lt;branch-name&gt;</code> </p>
+<p><code>git reset --hard HEAD~2 # this rolls back 2 commits</code> </p>
+<p><code>git checkout &lt;branch-name&gt;</code> </p>
+<p>Note that by HARD resetting you will lose any uncommitework. So make sure that everything is committed!</p>
+<p>git reset branch</p>
+<h2 id="show-all-remote-branches">Show all remote branches</h2>
+<h3 id="show-branches-remote-display">show branches remote display"</h3>
+<p>To view a list of all tracked and untracked remote branches, use: </p>
+<p><code>git remote show origin</code></p>
+<p>git add -u</p>
+<h2 id="list-all-files-changed-in-a-commit">List all files changed in a commit</h2>
+<h3 id="show-branches-remote-display_1">show branches remote display"</h3>
+<p>To view <strong>just</strong> the file names, use: </p>
+<p><code>git show --name-only SHA1</code></p>
+<p>Also view the status:</p>
+<p><code>git show --name-status SHA1</code></p>
+<p>git show</p>
+<h2 id="checkout-a-file-from-a-different-branch">Checkout a file from a different branch</h2>
+<h3 id="checkout-file-different-branch">checkout file different branch"</h3>
+<p>You can checkout a single file from a different branch without switching to it. Use: </p>
+<p><code>git checkout &lt;branch_name&gt; -- &lt;file_path&gt;</code></p>
+<p>git checkout</p>
+<h2 id="show-contents-of-a-file-at-a-specific-commit">Show contents of a file at a specific commit</h2>
+<h3 id="show-contents-of-a-file-at-a-particular-commit">Show contents of a file at a particular commit"</h3>
+<p>You can get a file’s contents out from a specific commit. Use: </p>
+<p><code>git show &lt;treeish&gt;:&lt;file&gt;</code> </p>
+<p><a href="http://gitready.com/intermediate/2009/02/27/get-a-file-from-a-specific-revision.html">Source</a></p>
+<p>git show</p>
+<h2 id="clone-a-repository-without-getting-the-entire-history">Clone a repository without getting the entire history</h2>
+<h3 id="git-clone">git clone"</h3>
+<p>You're looking for a shallow clone. This will only fetch the latest history and not all the objects in the repository, which might take a long time while not necessary. </p>
+<p><code>git clone &lt;repository URL&gt; --depth 1</code> </p>
+<p>The <code>depth</code> parameter allows you to specify how deep you want to go: </p>
+<p><code>git clone &lt;repository URL&gt; --depth 5</code></p>
+<p>clone shallow depth</p>
+<h2 id="add-a-remote-repository">Add a remote repository</h2>
+<h3 id="remote-add-origin">remote add origin"</h3>
+<p>Before you can push to a remote, you first need to add one. When you clone a repository, git will automatically add the URL you cloned from as the <code>origin</code> remote. To add one yourself, use: </p>
+<p><code>git remote add &lt;remote eame&gt; &lt;repository URL&gt;</code> </p>
+<p>For example: </p>
+<p><code>git remote add upstream https://github.com/magalhini/firstaidgit.git</code></p>
+<p>git remote add</p>
+<h2 id="list-all-remote-branches">List all remote branches</h2>
+<h3 id="remote-branch-list-all">remote branch list all"</h3>
+<p>To list all remotes: </p>
+<p><code>git remote</code> </p>
+<p>This will only show the names of the remotes. To view more information, use <code>git remote show</code>.</p>
+<p>git remote</p>
+<h2 id="show-information-about-a-remote-branch">Show information about a remote branch</h2>
+<h3 id="remote-branch-show-information">remote branch show information"</h3>
+<p>To show information about a remote branch, such as fetch and push URLs, tracked branches and HEAD, use: </p>
+<p><code>git remote show origin</code> </p>
+<p>Where <code>origin</code> is your remote.</p>
+<p>git remote show</p>
+<h2 id="delete-specified-tag">Delete specified tag</h2>
+<h3 id="delete-tag-for-local-and-remote">delete tag for local and remote"</h3>
+<p>You can delete a specific tag locally using: </p>
+<p><code>git tag -d [tag name]</code> </p>
+<p>Remove tag from remote using: </p>
+<p><code>git push [remote name] :refs/tags/[tag name]</code> </p>
+<p>git tag</p>
+<p>## Rename a remote</p>
+<h3 id="rename-a-remote">rename a remote"</h3>
+<p>To rename a remote: </p>
+<p><code>git remote rename &lt;oldRemote&gt; &lt;newRemote&gt;</code> </p>
+<p>You can verify your changes by listing the remotes: </p>
+<p><code>git remote</code> </p>
+<p><a href="https://help.github.com/articles/renaming-a-remote/">Source</a></p>
+<p>git remote rename <oldRemote> <newRemote></p>
+<p>{</p>
+<h2 id="remove-a-submodule">Remove a submodule</h2>
+<h3 id="remove-submodule-rm-delete">remove submodule rm delete"</h3>
+<p>To remove a submodule use: </p>
+<p><code>git rm &lt;submodule_path&gt;</code></p>
+<p>In case you later want to add a submodule with the same name, you will also need to use:</p>
+<p><code>rm -rf .git/modules/&lt;submodule_path&gt;</code></p>
+<p>git rm</p>
+<h2 id="compare-commit-log-difference-between-2-branches">Compare commit log difference between 2 branches</h2>
+<h3 id="commit-log-difference-between-2-branches">commit log difference between 2 branches"</h3>
+<p>You can compare difference in commit log between 2 branches by: </p>
+<p><code>git log [branch one]..[branch two]</code> </p>
+<p>Example to compare the <strong>staging</strong> and <strong>development</strong> branch logs: </p>
+<p><code>git log staging..development</code> </p>
+<p>git log</p>
+<h2 id="list-untracked-files-within-untracked-directories">List untracked files within untracked directories</h2>
+<h3 id="list-untracked-files-within-untracked-directories_1">list untracked files within untracked directories"</h3>
+<p>To list untracked files within untracked directories: </p>
+<p><code>git status -u</code> </p>
+<p>By default, git will not show files within directories that are untracked.</p>
+<p>git status</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Ing. Yubisel Vega Alvarez
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://www.linkedin.com/in/yubisel/" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/Yubisel" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "toc.integrate"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
