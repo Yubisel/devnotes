@@ -63,7 +63,9 @@ nav:
       - notas: docker/docker_notes.md
       - install: docker/docker_install.md
 
-  - git: git/git.md
+  - git: 
+    - tips: git/git.md
+    - tips 2: git/tips.md
 
   - Operating systems:
     - Linux:
