@@ -32,6 +32,7 @@ nav:
       - Set: programming/javascript/set.md
     - npm:
       - Dependency Cruiser: programming/node/dependency_cruiser.md
+      - Concurrently: programming/npm/concurrently.md
     - PHP:
       - Dates: programming/php/dates.md
       - Fechas en aplicacion desde varios lugares del mundo: programming/php/global_dates.md
