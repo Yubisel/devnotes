@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://yubisel.gitlab.io/commands/tar/">
+        <link rel="canonical" href="https://yubisel.gitlab.io/programming/npm/concurrently/">
       
       
-        <link rel="prev" href="../mktemp/">
+        <link rel="prev" href="../../javascript/set/">
       
       
-        <link rel="next" href="../uniq/">
+        <link rel="next" href="../../php/dates/">
       
-      <link rel="icon" href="../../images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>tar - &#60;dev notes/&#62;</title>
+        <title>Concurrently - &#60;dev notes/&#62;</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tar" class="md-skip">
+        <a href="#concurrently" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="&amp;#60;dev notes/&amp;#62;" class="md-header__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+    <a href="../../.." title="&amp;#60;dev notes/&amp;#62;" class="md-header__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              tar
+              Concurrently
             
           </span>
         </div>
@@ -183,7 +183,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="&amp;#60;dev notes/&amp;#62;" class="md-nav__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+    <a href="../../.." title="&amp;#60;dev notes/&amp;#62;" class="md-nav__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -214,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -227,14 +227,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -243,7 +245,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Programming
@@ -283,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/javascript/map/" class="md-nav__link">
+      <a href="../../javascript/map/" class="md-nav__link">
         Map
       </a>
     </li>
@@ -297,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/javascript/set/" class="md-nav__link">
+      <a href="../../javascript/set/" class="md-nav__link">
         Set
       </a>
     </li>
@@ -316,14 +318,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -332,7 +336,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           npm
@@ -345,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/node/dependency_cruiser.md" class="md-nav__link">
+      <a href="../../node/dependency_cruiser.md" class="md-nav__link">
         Dependency Cruiser
       </a>
     </li>
@@ -357,11 +361,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../programming/npm/concurrently/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Concurrently
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Concurrently
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/php/dates/" class="md-nav__link">
+      <a href="../../php/dates/" class="md-nav__link">
         Dates
       </a>
     </li>
@@ -421,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/php/global_dates/" class="md-nav__link">
+      <a href="../../php/global_dates/" class="md-nav__link">
         Fechas en aplicacion desde varios lugares del mundo
       </a>
     </li>
@@ -435,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/php/pretty/" class="md-nav__link">
+      <a href="../../php/pretty/" class="md-nav__link">
         Pretty format arrays and objects
       </a>
     </li>
@@ -449,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/php/constants/" class="md-nav__link">
+      <a href="../../php/constants/" class="md-nav__link">
         Constants
       </a>
     </li>
@@ -470,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/composer/composer/" class="md-nav__link">
+      <a href="../../composer/composer/" class="md-nav__link">
         Composer
       </a>
     </li>
@@ -511,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/react/newline_to_break/" class="md-nav__link">
+      <a href="../../react/newline_to_break/" class="md-nav__link">
         Newline to break (nl2br)
       </a>
     </li>
@@ -525,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/react/github_pages/" class="md-nav__link">
+      <a href="../../react/github_pages/" class="md-nav__link">
         Github pages
       </a>
     </li>
@@ -573,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/bash/30_bash_examples/" class="md-nav__link">
+      <a href="../../bash/30_bash_examples/" class="md-nav__link">
         bash examples
       </a>
     </li>
@@ -621,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/python/rangos/" class="md-nav__link">
+      <a href="../../python/rangos/" class="md-nav__link">
         rangos
       </a>
     </li>
@@ -635,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/python/listas/" class="md-nav__link">
+      <a href="../../python/listas/" class="md-nav__link">
         listas
       </a>
     </li>
@@ -649,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/python/tuplas/" class="md-nav__link">
+      <a href="../../python/tuplas/" class="md-nav__link">
         tuplas
       </a>
     </li>
@@ -663,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/python/diccionarios/" class="md-nav__link">
+      <a href="../../python/diccionarios/" class="md-nav__link">
         diccionarios
       </a>
     </li>
@@ -711,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/html/text_tags/" class="md-nav__link">
+      <a href="../../html/text_tags/" class="md-nav__link">
         Text tags
       </a>
     </li>
@@ -767,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/ionic/ionic/" class="md-nav__link">
+      <a href="../../../technologies/ionic/ionic/" class="md-nav__link">
         ionic
       </a>
     </li>
@@ -816,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/" class="md-nav__link">
+      <a href="../../../database/mysql/" class="md-nav__link">
         MySql
       </a>
     </li>
@@ -830,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/sql_server/" class="md-nav__link">
+      <a href="../../../database/sql_server/" class="md-nav__link">
         SQL Server
       </a>
     </li>
@@ -906,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker_notes/" class="md-nav__link">
+      <a href="../../../docker/docker_notes/" class="md-nav__link">
         notas
       </a>
     </li>
@@ -920,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker_install/" class="md-nav__link">
+      <a href="../../../docker/docker_install/" class="md-nav__link">
         install
       </a>
     </li>
@@ -976,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git/" class="md-nav__link">
+      <a href="../../../git/git/" class="md-nav__link">
         tips
       </a>
     </li>
@@ -990,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/tips/" class="md-nav__link">
+      <a href="../../../git/tips/" class="md-nav__link">
         tips 2
       </a>
     </li>
@@ -1066,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/linux/bash/ps1/" class="md-nav__link">
+      <a href="../../../operating_systems/linux/bash/ps1/" class="md-nav__link">
         bash
       </a>
     </li>
@@ -1080,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/linux/gnome/extensions/" class="md-nav__link">
+      <a href="../../../operating_systems/linux/gnome/extensions/" class="md-nav__link">
         Gnome
       </a>
     </li>
@@ -1094,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/linux/estructura_de_directorios/" class="md-nav__link">
+      <a href="../../../operating_systems/linux/estructura_de_directorios/" class="md-nav__link">
         Estructura de ficheros
       </a>
     </li>
@@ -1108,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/linux/cdpath/" class="md-nav__link">
+      <a href="../../../operating_systems/linux/cdpath/" class="md-nav__link">
         CDPATH
       </a>
     </li>
@@ -1156,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/my_config/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/my_config/" class="md-nav__link">
         My config
       </a>
     </li>
@@ -1170,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/clipboard/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/clipboard/" class="md-nav__link">
         Clipboard
       </a>
     </li>
@@ -1184,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/rename_several_files_from_console/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/rename_several_files_from_console/" class="md-nav__link">
         Rename several files from console
       </a>
     </li>
@@ -1198,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/top_process/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/top_process/" class="md-nav__link">
         Procesos
       </a>
     </li>
@@ -1212,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/lamp/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/lamp/" class="md-nav__link">
         lamp
       </a>
     </li>
@@ -1226,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache/" class="md-nav__link">
         apache
       </a>
     </li>
@@ -1240,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/ubuntu/ubuntu_splash_screen/" class="md-nav__link">
+      <a href="../../../operating_systems/ubuntu/ubuntu_splash_screen/" class="md-nav__link">
         Splash screen
       </a>
     </li>
@@ -1288,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/windows/enable_version_selection_in_the_installer/" class="md-nav__link">
+      <a href="../../../operating_systems/windows/enable_version_selection_in_the_installer/" class="md-nav__link">
         Enable version selection in the installer
       </a>
     </li>
@@ -1302,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating_systems/windows/install_net_framework/" class="md-nav__link">
+      <a href="../../../operating_systems/windows/install_net_framework/" class="md-nav__link">
         Install .NET Framework 3.5 via DISM
       </a>
     </li>
@@ -1329,16 +1381,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
@@ -1347,7 +1397,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Commands/Bash programs
@@ -1387,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/ssh/" class="md-nav__link">
+      <a href="../../../commands/ssh/ssh/" class="md-nav__link">
         ssh
       </a>
     </li>
@@ -1401,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/copy_the_public_key/" class="md-nav__link">
+      <a href="../../../commands/ssh/copy_the_public_key/" class="md-nav__link">
         Copy the public key to server
       </a>
     </li>
@@ -1422,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dd/" class="md-nav__link">
+      <a href="../../../commands/dd/" class="md-nav__link">
         dd
       </a>
     </li>
@@ -1436,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pwgen/" class="md-nav__link">
+      <a href="../../../commands/pwgen/" class="md-nav__link">
         pwgen
       </a>
     </li>
@@ -1450,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seq/" class="md-nav__link">
+      <a href="../../../commands/seq/" class="md-nav__link">
         seq
       </a>
     </li>
@@ -1464,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ncdu/" class="md-nav__link">
+      <a href="../../../commands/ncdu/" class="md-nav__link">
         ncdu
       </a>
     </li>
@@ -1478,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grep/directory_word_search/" class="md-nav__link">
+      <a href="../../../commands/grep/directory_word_search/" class="md-nav__link">
         grep
       </a>
     </li>
@@ -1492,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jq/" class="md-nav__link">
+      <a href="../../../commands/jq/" class="md-nav__link">
         jq
       </a>
     </li>
@@ -1506,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mktemp/" class="md-nav__link">
+      <a href="../../../commands/mktemp/" class="md-nav__link">
         mktemp
       </a>
     </li>
@@ -1518,52 +1568,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          tar
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../commands/tar/" class="md-nav__link">
         tar
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos" class="md-nav__link">
-    Ejemplos
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1575,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uniq/" class="md-nav__link">
+      <a href="../../../commands/uniq/" class="md-nav__link">
         uniq
       </a>
     </li>
@@ -1589,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../others/" class="md-nav__link">
+      <a href="../../../commands/others/" class="md-nav__link">
         others
       </a>
     </li>
@@ -1638,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programs/phpmyadmin/" class="md-nav__link">
+      <a href="../../../programs/phpmyadmin/" class="md-nav__link">
         phpmyadmin
       </a>
     </li>
@@ -1652,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programs/flameshot/" class="md-nav__link">
+      <a href="../../../programs/flameshot/" class="md-nav__link">
         Flameshot
       </a>
     </li>
@@ -1693,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programs/apache/general/" class="md-nav__link">
+      <a href="../../../programs/apache/general/" class="md-nav__link">
         General
       </a>
     </li>
@@ -1707,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programs/apache/permits/" class="md-nav__link">
+      <a href="../../../programs/apache/permits/" class="md-nav__link">
         Permisos
       </a>
     </li>
@@ -1763,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../todo/films_to_watch/" class="md-nav__link">
+      <a href="../../../todo/films_to_watch/" class="md-nav__link">
         Films to watch
       </a>
     </li>
@@ -1812,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../links/images/" class="md-nav__link">
+      <a href="../../../links/images/" class="md-nav__link">
         Images
       </a>
     </li>
@@ -1826,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../links/others/" class="md-nav__link">
+      <a href="../../../links/others/" class="md-nav__link">
         Others
       </a>
     </li>
@@ -1840,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../links/api/" class="md-nav__link">
+      <a href="../../../links/api/" class="md-nav__link">
         api
       </a>
     </li>
@@ -1889,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/mkdocs/" class="md-nav__link">
+      <a href="../../../about/mkdocs/" class="md-nav__link">
         MkDocs
       </a>
     </li>
@@ -1903,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/about/" class="md-nav__link">
+      <a href="../../../about/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1936,28 +1945,113 @@
 
 
 
-<h1 id="tar">tar</h1>
-<p>Compres files</p>
-<p>Usage: <code>tar [OPTION...] [FILE]...</code></p>
+<h1 id="concurrently">Concurrently</h1>
+<p>Run multiple commands concurrently. Like npm run watch-js &amp; npm run watch-less but better.
+<a href="https://www.npmjs.com/package/concurrently">docs</a></p>
+<h2 id="installation">Installation</h2>
+<p>concurrently can be installed in the global scope (if you'd like to have it available and use it on the whole system) or locally for a specific package (for example if you'd like to use it in the scripts section of your package):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>npm</th>
+<th>Yarn</th>
+<th>pnpm</th>
+<th>Bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global</td>
+<td>npm i -g concurrently</td>
+<td>yarn global add concurrently</td>
+<td>pnpm add -g concurrently</td>
+<td>bun add -g concurrently</td>
+</tr>
+<tr>
+<td>Local*</td>
+<td>npm i -D concurrently</td>
+<td>yarn add -D concurrently</td>
+<td>pnpm add -D concurrently</td>
+<td>bun add -d concurrently</td>
+</tr>
+</tbody>
+</table>
+<p>*It's recommended to add concurrently to devDependencies as it's usually used for developing purposes. Please adjust the command if this doesn't apply in your case.</p>
+<h2 id="how-to-use">How to use</h2>
 <ul>
-<li><code>-c, --create</code> create a new archive</li>
-<li><code>-u, --update</code> only append files newer than copy in archive</li>
-<li><code>-x, --extract, --get</code> extract files from an archive</li>
-<li><code>-f, --file=ARCHIVE</code> use archive file or device <code>ARCHIVE</code></li>
-<li><code>-a, --auto-compress</code> use archive suffix to determine the compression program</li>
-<li><code>-z, --gzip, --gunzip, --ungzip</code> filter the archive through gzip</li>
-<li><code>-v, --verbose</code> verbosely list files processed</li>
-<li><code>-t, --list</code> list the contents of an archive</li>
+<li>Initialize a npm project <code>npm init --y</code> for use through <code>npm run</code> and less verbosability with commands</li>
+<li>Install the package concurrently</li>
+<li>Create scripts in <code>package.json</code> to start each project individually see example below</li>
+<li>Create general script with concurrently to execute all the previous at the same time</li>
+<li>Run your project</li>
 </ul>
-<h2 id="ejemplos">Ejemplos</h2>
-<h3 id="crear-comprimido">Crear comprimido</h3>
-<pre><code class="language-bash">tar -caf nombreFichero.tar.gz * # con el * comprime todo en el directorio donde se ejecuta el comando, sustituir por nombre de carpeta en case de querer solo una
+<h3 id="example">Example</h3>
+<p>With this folder structure</p>
+<ul>
+<li>source</li>
+<li>admin (react admin application created with <code>create-react-app</code>)</li>
+<li>app (next application to show some specific data created with <code>create-next-app</code>)</li>
+<li>
+<p>api (nest backend api)</p>
+</li>
+<li>
+<p>Each folder have it's own .env file with it's own values, but for example the admin application need to define excecution port to avoid error and becouse react and next use the same port (3000) by default </p>
+</li>
+</ul>
+<p>In <code>admin/.env</code> file define <code>PORT=3001</code> and react will use this one instead of default one.</p>
+<ul>
+<li>Execute <code>npm init --y</code> this create the <code>package.json</code> file</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;source&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
 </code></pre>
-<h3 id="mostrar-el-contenido-de-un-fichero-comprimido">Mostrar el contenido de un fichero comprimido</h3>
-<pre><code class="language-bash">tar -taf nombreFichero.tar.gz
+<ul>
+<li>Install concurrently dependency  <code>npm install -D concurrently</code></li>
+<li>Modify <code>scripts</code> section as follow</li>
+</ul>
+<pre><code class="language-json">  &quot;start:api&quot;: &quot;npm --prefix ./api/ run start:dev&quot;,
+  &quot;start:app&quot;: &quot;npm --prefix ./app/ run dev&quot;,
+  &quot;start:admin&quot;: &quot;npm --prefix ./admin/ run start&quot;
 </code></pre>
-<h3 id="extraer-solo-una-de-las-carpetas-o-fichero-dentro-del-comprimido">Extraer solo una de las carpetas o fichero dentro del comprimido</h3>
-<pre><code class="language-bash">tar -xaf nombreFichero.tar.gz carpetaInterna
+<p><code>"start:api"</code> start the nest api</p>
+<p><code>"start:app"</code> start the next app</p>
+<p><code>"start:admin"</code> start the react app</p>
+<ul>
+<li>Add the new one to run all with concurrently</li>
+</ul>
+<p><code>"dev": "concurrently -c \"npm run start:api\" \"npm run start:app\" \"npm run start:admin\""</code></p>
+<p>With which we can run all environments at the same time, remmember that each one has to be wrapped in quotes. In this way, the log of each one identified with numbers <code>[0]</code>, <code>[1]</code> and <code>[2]</code>. To assign a name to each one you can use the <code>--name</code> parameter, for example: <code>--names \"API,APP,ADMIN\"</code>. This will help visually to identify logs.</p>
+<p>There is some other options for colorize or use shorthands read the <a href="https://www.npmjs.com/package/concurrently">docs</a> for know more about it.</p>
+<p>In my case this was the final <code>package.json</code></p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;source&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start:api&quot;: &quot;npm --prefix ./api/ run start:dev&quot;,
+    &quot;start:app&quot;: &quot;npm --prefix ./app/ run dev&quot;,
+    &quot;start:admin&quot;: &quot;npm --prefix ./admin/ run start&quot;,
+    &quot;dev&quot;: &quot;concurrently -c \&quot;blue.bold,magenta.bold,yellow.bold\&quot; \&quot;npm run start:*\&quot;&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;concurrently&quot;: &quot;^8.2.0&quot;
+  }
+}
 </code></pre>
 
 
@@ -2016,10 +2110,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "toc.integrate"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.instant", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
