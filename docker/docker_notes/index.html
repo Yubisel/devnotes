@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#hacer-cat-a-fichero-dentro-de-contenedor" class="md-skip">
           Skip to content
         </a>
       
@@ -345,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/node/dependency_cruiser.md" class="md-nav__link">
+      <a href="../../programming/npm/dependency_cruiser/" class="md-nav__link">
         Dependency Cruiser
       </a>
     </li>
@@ -916,8 +916,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           notas
@@ -934,8 +932,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -946,6 +942,27 @@
         <li class="md-nav__item">
   <a href="#hacer-cat-a-fichero-dentro-de-contenedor" class="md-nav__link">
     Hacer cat a fichero dentro de contenedor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redes" class="md-nav__link">
+    Redes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salvar-en-fichero-una-imagen" class="md-nav__link">
+    Salvar en fichero una imagen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-a-docker-images-content-without-starting-a-container" class="md-nav__link">
+    Inspect a Docker Image's Content Without Starting a Container
   </a>
   
 </li>
@@ -1856,69 +1873,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
-          Help
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_12">
-          <span class="md-nav__icon md-icon"></span>
-          Help
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/mkdocs/" class="md-nav__link">
-        MkDocs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1938,7 +1892,8 @@
 
 
 
-<h1 id="docker">Docker</h1>
+  <h1>notas</h1>
+
 <h2 id="hacer-cat-a-fichero-dentro-de-contenedor">Hacer cat a fichero dentro de contenedor</h2>
 <p>Esto es util para cuando hace falta el contenido de un fichero dentro del container por ejemplo luego de una instalacion de jenkins </p>
 <pre><code class="language-bash">docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
@@ -2041,7 +1996,7 @@
 <p>Ejecutar comando desde fuera del container</p>
 <pre><code class="language-bash">-docker exec &lt;nombreContainer&gt; bash -c &quot;&lt;comando a ejecutar&gt;&quot;
 </code></pre>
-<h3 id="redes">Redes</h3>
+<h2 id="redes">Redes</h2>
 <p>Listar las redes de docker</p>
 <pre><code class="language-bash">-docker network ls
 </code></pre>
@@ -2073,13 +2028,42 @@
 <p>Asignar ip a contenedor</p>
 <pre><code class="language-bash">-docker run --network &lt;nombreRed&gt; --ip &lt;ip&gt;  -d --name &lt;nombreContainer&gt; &lt;imagen&gt;
 </code></pre>
-<h3 id="salvar-en-fichero-una-imagen">Salvar en fichero una imagen</h3>
+<h2 id="salvar-en-fichero-una-imagen">Salvar en fichero una imagen</h2>
 <p>Util cuando se quiere compartir una imagen sin depender de docker hub o un repositorio alojado en la nube, se comprime la imagen y se comparte como un fichero</p>
 <pre><code class="language-bash">docker save myusername/myproject:latest | gzip -c &gt; myproject_img_bak20141103.tgz
 </code></pre>
 <p>Forma de cargarla en la pc destino </p>
 <pre><code class="language-bash">gunzip -c myproject_img_bak20141103.tgz | docker load
 </code></pre>
+<h2 id="inspect-a-docker-images-content-without-starting-a-container">Inspect a Docker Image's Content Without Starting a Container</h2>
+<p>Docker images can bundle arbitrary binaries and libraries into a single blob of data. Inspecting what's actually inside an image helps you assess its suitability and identify any security hazards.</p>
+<p>The easiest way to explore an image's content involves starting a container, getting a shell session, and then using regular terminal commands like <code>ls</code> and <code>cd</code> to view its directory structure from within. This isn't ideal in security-critical environments though - creating a container with an unknown image could expose you to a malicious entrypoint script.</p>
+<p>Here are techniques you can use to inspect an image's files without starting a container.</p>
+<h3 id="creating-a-container-without-starting-it">Creating a Container Without Starting It</h3>
+<p><code>docker create</code> is a lesser-known counterpart to docker run. It creates a new container atop a given image without starting it. You could launch it later on with the docker start command.</p>
+<p>Creating a new container isn't dangerous as it'll stay inert until it's run. You can roughly liken it to defining the config settings for a VM which you don't use. Even if it's set to boot from a tainted operating system ISO, you're not going to cause any damage to your environment.</p>
+<p><code>docker create --name suspect-container suspect-image:latest</code></p>
+<p>The command above creates a new container called suspect-container that will be based on the suspect-image:latest image.</p>
+<h3 id="exporting-the-containers-filesystem">Exporting the Container's Filesystem</h3>
+<p>Now you've got a valid but stopped container, you can export its filesystem using the docker export command. As the container's never been started, you can be sure the export accurately represents the filesystem defined by your image's layers.</p>
+<p><code>docker export suspect-container &gt; suspect-container.tar</code></p>
+<p>You'll end up with a tar archive in your working directory that contains everything inside your image. Open or extract this archive using your favorite software to browse the image's directories and list and view files.</p>
+<p>If you don't need to save or open the archive, instead preferring to get the file list in your terminal, modify the tar command:</p>
+<p><code>docker export suspect-container | tar t &gt; suspect-container-files.txt</code></p>
+<p><code>tar t</code> lists the contents of the input archive. You'll end up with a list of everything in your image inside <code>suspect-container-files.txt</code>.</p>
+<h3 id="using-docker-image-save">Using "docker image save"</h3>
+<p>A variation on this technique is using docker image save. This command directly saves an image's data to a tar archive.</p>
+<p><code>docker image save suspect-image:latest &gt; suspect-image.tar</code></p>
+<p>This method produces an archive that's focused on the image, not containers created from it. The tar will include a manifest.json file, describing the image's layers, and a set of directories containing the content of all the individual layers.</p>
+<p>This is helpful when you're evaluating each layer's role in building the image. However, creating and exporting a stopped container is a more accessible way to browse the image's final filesystem.</p>
+<h3 id="listing-layers-with-docker-image-history">Listing Layers With "docker image history"</h3>
+<p>Another way of inspecting an image's content is to view its layer list with the docker image history command.</p>
+<p><code>docker image history suspect-image:latest</code></p>
+<p>This exposes the Dockerfile instructions that composed the image's layers. It won't let you see individual files and directories in the image's filesystem but can more be effective at highlighting suspect behavior.</p>
+<p>Each line in the command's output represents a new layer in the image. The "CREATED BY" column shows the Dockerfile instruction that created the layer.</p>
+<p>Scanning the layer list helps you quickly identify suspicious actions that could indicate you're using a malicious image. Look for unknown binaries in RUN instructions, unexpected environment variable changes, and suspicious CMD and ENTRYPOINT statements.</p>
+<p>The latter two layers are arguably the most important to assess when inspecting an image's history. They tell you exactly what will launch when you docker run or docker start a container. If either instruction looks suspicious or unfamiliar, consider using the techniques above to fully inspect the referenced binaries or scripts.</p>
+<p>Accessing an image's filesystem provides a very granular view of its contents where malicious content can easily go unnoticed, even after manual inspection. The layer list exposed by docker image history can't help you find disguised filesystem items but is more effective at surfacing blatantly malicious operations such as furtive spyware downloads or environment variable overrides.</p>
 
 
 
