@@ -31,7 +31,7 @@ nav:
       - Map: programming/javascript/map.md
       - Set: programming/javascript/set.md
     - npm:
-      - Dependency Cruiser: programming/node/dependency_cruiser.md
+      - Dependency Cruiser: programming/npm/dependency_cruiser.md
       - Concurrently: programming/npm/concurrently.md
     - PHP:
       - Dates: programming/php/dates.md
@@ -117,9 +117,9 @@ nav:
     - Others: links/others.md
     - api: links/api.md
 
-  - Help:
-    - MkDocs: about/mkdocs.md
-    - About:  about/about.md
+  # - Help:
+  #   - MkDocs: about/mkdocs.md
+  #   - About:  about/about.md
 
 markdown_extensions:
   - toc:
