@@ -51,6 +51,8 @@ nav:
       - diccionarios: programming/python/diccionarios.md
     - html:
       - Text tags: programming/html/text_tags.md
+    - node:
+      - Generating Optimized Image Formats with Node.js: programming/node/generating_optimized_image_formats_with_node.md
 
   - Technologies:
     - ionic: technologies/ionic/ionic.md
