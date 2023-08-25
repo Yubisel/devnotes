@@ -63,7 +63,8 @@ nav:
 
   - Docker:
     - Docker:
-      - notas: docker/docker_notes.md
+      - Notas: docker/docker_notes.md
+      - Notas 2: docker/docker_notes_2.md
       - install: docker/docker_install.md
 
   - git: 
