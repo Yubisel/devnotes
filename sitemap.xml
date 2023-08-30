@@ -2,322 +2,332 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yubisel.gitlab.io/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/about/about/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/about/authors/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/about/mkdocs/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/dd/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/jq/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/mktemp/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/ncdu/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/others/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/pwgen/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/seq/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/tar/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/uniq/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/grep/directory_word_search/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/ssh/copy_the_public_key/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/commands/ssh/ssh/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/database/mysql/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/database/sql_server/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/docker/docker_install/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/docker/docker_notes/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/docker/docker_notes_2/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/ghost_docs/ok/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/git/git/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/git/tips/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/links/api/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/links/images/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/links/others/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/linux/cdpath/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/linux/estructura_de_directorios/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/linux/bash/ps1/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/linux/gnome/extensions/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/clipboard/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/lamp/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/my_config/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/rename_several_files_from_console/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/top_process/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/ubuntu/ubuntu_splash_screen/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/windows/enable_version_selection_in_the_installer/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/operating_systems/windows/install_net_framework/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/bash/30_bash_examples/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/composer/composer/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/html/text_tags/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/javascript/map/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/javascript/set/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/node/generating_optimized_image_formats_with_node/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/npm/concurrently/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/npm/dependency_cruiser/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/php/constants/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/php/dates/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/php/global_dates/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/php/pretty/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/python/diccionarios/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/python/listas/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/python/rangos/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/python/tuplas/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/react/github_pages/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programming/react/newline_to_break/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yubisel.gitlab.io/programming/typescript/style_guide/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yubisel.gitlab.io/programming/typescript/the_concise_typeScript_book/</loc>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programs/flameshot/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programs/phpmyadmin/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programs/apache/general/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/programs/apache/permits/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/technologies/ionic/ionic/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yubisel.gitlab.io/todo/films_to_watch/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

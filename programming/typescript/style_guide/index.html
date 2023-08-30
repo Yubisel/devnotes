@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://yubisel.gitlab.io/programming/php/pretty/">
+        <link rel="canonical" href="https://yubisel.gitlab.io/programming/typescript/style_guide/">
       
       
-        <link rel="prev" href="../global_dates/">
+        <link rel="prev" href="../../..">
       
       
-        <link rel="next" href="../constants/">
+        <link rel="next" href="../the_concise_typeScript_book/">
       
       <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Pretty format arrays and objects - &#60;dev notes/&#62;</title>
+        <title>Style Guide - &#60;dev notes/&#62;</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pretty-format-arrays-and-objects" class="md-skip">
+        <a href="#typescript-style-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pretty format arrays and objects
+              Style Guide
             
           </span>
         </div>
@@ -256,14 +256,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
       
       
       
@@ -272,7 +274,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           Typescript
@@ -283,11 +285,129 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../typescript/style_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Style Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Style Guide
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-guide" class="md-nav__link">
+    About Guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TLDR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-immutability" class="md-nav__link">
+    Data Immutability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-organization" class="md-nav__link">
+    Source Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-react" class="md-nav__link">
+    Appendix - React
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-tests-unit-integration" class="md-nav__link">
+    Appendix - Tests (Unit &amp; Integration)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -299,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../typescript/the_concise_typeScript_book/" class="md-nav__link">
+      <a href="../the_concise_typeScript_book/" class="md-nav__link">
         The Concise TypeScript Book
       </a>
     </li>
@@ -442,16 +562,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
       
       
       
@@ -460,7 +578,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           PHP
@@ -473,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dates/" class="md-nav__link">
+      <a href="../../php/dates/" class="md-nav__link">
         Dates
       </a>
     </li>
@@ -487,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_dates/" class="md-nav__link">
+      <a href="../../php/global_dates/" class="md-nav__link">
         Fechas en aplicacion desde varios lugares del mundo
       </a>
     </li>
@@ -499,21 +617,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../php/pretty/" class="md-nav__link">
         Pretty format arrays and objects
       </a>
-      
     </li>
   
 
@@ -525,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../constants/" class="md-nav__link">
+      <a href="../../php/constants/" class="md-nav__link">
         Constants
       </a>
     </li>
@@ -1968,48 +2076,684 @@
 
 
 
-<h1 id="pretty-format-arrays-and-objects">Pretty format arrays and objects</h1>
-<pre><code class="language-php">class Persona{
-    public $nombre;
-    public $apellidos;
-    public $sexo;
+<h1 id="typescript-style-guide">TypeScript Style Guide</h1>
+<p>TypeScript Style Guide provides a concise set of conventions and best practices used to create consistent, maintainable code.</p>
+<h2 id="introduction">Introduction</h2>
+<p>TypeScript Style Guide provides a concise set of conventions and best practices used to create consistent, maintainable code.</p>
+<p>As projects grow in size and complexity, maintaining code quality and ensuring consistent practices becomes increasingly challenging. Defining and following a standard way to write TypeScript applications brings consistent codebase and faster development cycles.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><TableOfContents items={toc} /></p>
+<h2 id="about-guide">About Guide</h2>
+<p>As any code style guide is opinionated, this is no different as it tries to set conventions (sometimes arbitrary) that govern our code.</p>
+<p>Since "consistency is the key", style guide strives to enforce majority of the rules by using automated tooling as ESLint, TypeScript, Prettier, etc. Still certain design and architectural decisions must be followed which are described with conventions bellow.</p>
+<p>Style Guide requires you to use:</p>
+<ul>
+<li><a href="https://github.com/microsoft/TypeScript">TypeScript v5</a></li>
+<li><a href="https://github.com/typescript-eslint/typescript-eslint">typescript-eslint v6</a> with <a href="https://typescript-eslint.io/linting/configs/#strict-type-checked"><code>strict-type-checked</code></a>,
+  <a href="https://typescript-eslint.io/linting/configs/#stylistic-type-checked"><code>stylistic-type-checked</code></a> configurations enabled.</li>
+</ul>
+<p>Style Guide assumes using, but is not limited to:</p>
+<ul>
+<li><a href="https://github.com/facebook/react">React</a> as UI library for frontend conventions.</li>
+<li><a href="https://jestjs.io/">Jest</a> and <a href="https://testing-library.com/">Testing Library</a> for testing conventions.</li>
+</ul>
+<h2 id="tldr">TLDR</h2>
+<ul>
+<li>Strive for data immutability. <a href="#data-immutability">&#11107;</a></li>
+<li>Embrace const assertions. <a href="#const-assertion">&#11107;</a></li>
+<li>Avoid type assertions. <a href="#type--non-nullability-assertions">&#11107;</a></li>
+<li>Strive for functions to be pure, stateless and have single responsibility. <a href="#functions">&#11107;</a></li>
+<li>Majority of function arguments should be required (use optional sparingly). <a href="#required--optional-args">&#11107;</a></li>
+<li>Strong emphasis to keep naming conventions consistent and readable. <a href="#naming-conventions">&#11107;</a></li>
+<li>Use named exports. <a href="#named-export">&#11107;</a></li>
+<li>Code is organized and grouped by feature. Collocate code as close as possible to where it's relevant. <a href="#code-collocation">&#11107;</a></li>
+<li>UI components must only show derived state and send events, nothing more (no business logic). <a href="#component-types">&#11107;</a></li>
+<li>Test business logic, not implementation details. <a href="#what--how-to-test">&#11107;</a></li>
+</ul>
+<h2 id="data-immutability">Data Immutability</h2>
+<p>Majority of the data should be immutable (use <code>Readonly</code>, <code>ReadonlyArray</code>, always return new array, object etc). To keep cognitive load for future developers low, try to keep data objects small.<br />
+As an exception mutations should be used sparingly in cases where truly necessary: complex objects, performance reasoning etc.</p>
+<h2 id="types">Types</h2>
+<h3 id="type-definition">Type Definition</h3>
+<p>TypeScript offers two options for type definitions - <code>type</code> and <code>interface</code>. As they come with some functional differences, we try to limit syntax difference and pick one for consistency.</p>
+<p>All types must be defined with <code>type</code> alias <a href="https://typescript-eslint.io/rules/consistent-type-definitions/#type">(eslint rule)</a>.</p>
+<p><Chip>
+  Consider using interfaces if developing package that can be further extended, team is more comfortable working with
+  interfaces etc. In such case disable lint rule where needed e.g. using type unions (type Status = 'loading' | 'error')
+  etc.
+</Chip></p>
+<pre><code class="language-ts">// ❌ Avoid interface definitions
+interface UserRole = 'admin' | 'guest'; // invalid - interface can't define (commonly used) type unions
 
-    function __construct($nombre, $apellidos, $sexo){
-        $this-&gt;nombre = $nombre;
-        $this-&gt;apellidos = $apellidos;
-        $this-&gt;sexo = $sexo;
-    }
+interface UserInfo {
+  name: string;
+  role: 'admin' | 'guest';
 }
 
+// ✅ Use type definition
+type UserRole = 'admin' | 'guest';
 
-function pretty($var)
-{
-    return gettype($var) . ' ' . json_encode(
-        $var,
-        JSON_UNESCAPED_SLASHES |
-            JSON_UNESCAPED_UNICODE |
-            JSON_PRETTY_PRINT |
-            JSON_PARTIAL_OUTPUT_ON_ERROR |
-            JSON_INVALID_UTF8_SUBSTITUTE
-    );
-}
+type UserInfo = {
+  name: string;
+  role: UserRole;
+};
 
-$oPersona = new Persona(&quot;Jonh&quot;, &quot;Doe&quot;, &quot;Masculino&quot;);
-
-echo '&lt;pre&gt;';
-echo pretty($oPersona);
-echo '&lt;/pre&gt;';
-
-
-// output
-/**
-object {
-    &quot;nombre&quot;: &quot;Jonh&quot;,
-    &quot;apellidos&quot;: &quot;Doe&quot;,
-    &quot;sexo&quot;: &quot;Masculino&quot;
-}
-*/
 </code></pre>
+<p>In case of declaration merging (e.g. extending third-party library types) use <code>interface</code> and disable lint rule.</p>
+<pre><code class="language-ts">// types.ts
+declare namespace NodeJS {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  export interface ProcessEnv {
+    NODE_ENV: 'development' | 'production';
+    PORT: string;
+    CUSTOM_ENV_VAR: string;
+  }
+}
+
+// server.ts
+app.listen(process.env.PORT, () =&gt; {...}
+</code></pre>
+<h3 id="type-non-nullability-assertions">Type &amp; Non-nullability Assertions</h3>
+<p>Type assertions <code>user as User</code> and non-nullability assertions <code>user!.name</code> are unsafe. Both only silence TypeScript compiler and increase the risk of crashing application at runtime.<br />
+ They can only be used as last resort exceptions (e.g. third party library types mismatch etc.) with strong rational why being introduced into codebase.</p>
+<pre><code class="language-ts">// ❌ Avoid type &amp; non-nullability assertions
+type User = { id: string; username: string; avatar: string | null };
+const user = { name: 'Nika' } as User;
+renderUserAvatar(user!.avatar);
+</code></pre>
+<h3 id="type-any">Type any</h3>
+<p><code>any</code> data type must not be used as it represents literally “any” value that TypeScript defaults to and skips type checking since it cannot infer the type. As such, any is dangerous, it can mask severe programming errors.<br />
+ If error truly cannot be resolved as safer option use type <code>unknown</code> since it does not allow dereferencing all properties or as last resort use <code>@ts-expect-error</code> (<a href="#type-error">Type Error</a>).</p>
+<h3 id="type-inference">Type Inference</h3>
+<p>
+  As rule of thumb, explicitly declare a type when it help narrows it.
+  <Chip>
+    Just because you don't need to add types, doesn't mean you shouldn't. In some cases explicit type declaration can
+    increase code readability and intent.
+  </Chip>
+</p>
+
+<pre><code class="language-ts">// ❌ Avoid
+// Type can be inferred
+const userRole: string = 'admin'; // Type 'string'
+const employees = new Map&lt;string, number&gt;([['gabriel', 32]]);
+const [isActive, setIsActive] = useState&lt;boolean&gt;(false);
+
+// Type can be narrowed
+const employees = new Map(); // Type 'Map&lt;any, any&gt;'
+type UserRole = 'admin' | 'guest';
+const [userRole, setUserRole] = useState('admin'); // Type 'string'
+
+// ✅ Use
+const USER_ROLE = 'admin'; // Type 'admin'
+const employees = new Map([['gabriel', 32]]); // Type 'Map&lt;string, number&gt;'
+const [isActive, setIsActive] = useState(false); // Type 'boolean'
+
+const employees = new Map&lt;string, number&gt;(); // Type 'Map&lt;string, number&gt;'
+employees.set('gabriel', 32);
+type UserRole = 'admin' | 'guest';
+const [userRole, setUserRole] = useState&lt;UserRole&gt;('admin'); // Type 'UserRole'
+
+</code></pre>
+<h3 id="return-types">Return Types</h3>
+<p>Including return type annotations is highly encouraged, altought not required (<a href="https://typescript-eslint.io/rules/explicit-function-return-type/">eslint rule</a>).</p>
+<p>Consider benefits when explicitly typing the return value of a function:</p>
+<ul>
+<li>Return values makes it clear and easy to understand to any calling code what type is returned.</li>
+<li>In the case where there is no return value, the calling code doesn't try to use the undefined value when it shouldn't.</li>
+<li>Surface potential type errors faster in the future if there are code changes that change the return type of the function.</li>
+<li>Easier to refactor, since it ensures that the return value is assigned to a variable of the correct type.</li>
+<li>Similar to writing tests before implementation (TDD), defining function arguments and return type, gives you the opportunity to discuss the feature functionality and its interface ahead of implementation.</li>
+<li>Although type inference is very convenient, adding return types can save TypeScript compiler a lot of work.</li>
+</ul>
+<h3 id="type-error">Type Error</h3>
+<p>If TypeScript error can't be mitigated, as last resort use <code>@ts-expect-error</code> to suppress it (<a href="https://typescript-eslint.io/rules/prefer-ts-expect-error/">eslint rule</a>). If at any future point suppressed line becomes error-free, TypeScript compiler will indicate it.<br />
+<code>@ts-ignore</code> is not allowed, while <code>@ts-expect-error</code> can be used with provided description (<a href="https://typescript-eslint.io/rules/ban-ts-comment/#allow-with-description">eslint rule</a>).</p>
+<pre><code class="language-ts">// ❌ Avoid @ts-ignore
+// @ts-ignore
+const result = doSomething('hello');
+
+// ✅ Use @ts-expect-error with description
+// @ts-expect-error: the library definition is wrong
+const result = doSomething('hello');
+</code></pre>
+<h3 id="array-types">Array Types</h3>
+<p>Array types must be defined with generic syntax (<a href="https://typescript-eslint.io/rules/array-type/#generic">eslint rule</a>).</p>
+<p><Chip>
+  As there is no functional difference between 'generic' and 'array' definition, feel free to set the one your team
+  finds most readable to work with.
+</Chip></p>
+<pre><code class="language-ts">// ❌ Avoid
+const x: string[] = ['foo', 'bar'];
+const y: readonly string[] = ['foo', 'bar'];
+
+// ✅ Use
+const x: Array&lt;string&gt; = ['foo', 'bar'];
+const y: ReadonlyArray&lt;string&gt; = ['foo', 'bar'];
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p>Function conventions should be followed as much as possible (some of them derives from functional programming basic concepts):</p>
+<h3 id="general">General</h3>
+<p>Function:</p>
+<ul>
+<li>should have single responsibility.</li>
+<li>should be stateless where the same input arguments return same value every single time.</li>
+<li>should accept at least one argument and return data.</li>
+<li>should not have side effects, but be pure. It's implementation should not modify or access variable value outside its local environment (global state, fetching etc.).</li>
+</ul>
+<h3 id="single-object-arg">Single Object Arg</h3>
+<p>To keep function readable and easily extensible for the future (adding/removing args), strive to have single object as the function arg, instead of multiple args.<br />
+ As exception this not applies when having only one primitive single arg (e.g. simple functions isNumber(value), implementing currying etc.).</p>
+<pre><code class="language-ts">// ❌ Avoid having multiple arguments
+transformUserInput('client', false, 60, 120, null, true, 2000);
+
+// ✅ Use options object as argument
+transformUserInput({
+  method: 'client',
+  isValidated: false,
+  minLines: 60,
+  maxLines: 120,
+  defaultInput: null,
+  shouldLog: true,
+  timeout: 2000,
+});
+</code></pre>
+<h3 id="required-optional-args">Required &amp; Optional Args</h3>
+<p>Strive to have majority of args required and use optional sparingly.<br />
+ If function becomes to complex it probably should be broken into smaller pieces.<br />
+ An exaggerated example where implementing 10 functions with 5 required args each, is better then implementing one "can do it all" function that accepts 50 optional args.</p>
+<h3 id="args-as-discriminated-union">Args as Discriminated Union</h3>
+<p>When applicable use <strong>discriminated union type</strong> to eliminate optional args, which will decrease complexity on function API and only necessary/required args will be passed depending on its use case.</p>
+<pre><code class="language-ts">// ❌ Avoid optional args as they increase complexity of function API
+type StatusParams = {
+  data?: Products;
+  title?: string;
+  time?: number;
+  error?: string;
+};
+
+// ✅ Strive to have majority of args required, if that's not possible,
+// use discriminated union for clear intent on function usage
+type StatusParamsSuccess = {
+  status: 'success';
+  data: Products;
+  title: string;
+};
+
+type StatusParamsLoading = {
+  status: 'loading';
+  time: number;
+};
+
+type StatusParamsError = {
+  status: 'error';
+  error: string;
+};
+
+type StatusParams = StatusSuccess | StatusLoading | StatusError;
+
+export const parseStatus = (params: StatusParams) =&gt; {...
+</code></pre>
+<h2 id="variables">Variables</h2>
+<h3 id="const-assertion">Const Assertion</h3>
+<p>Strive to use const assertion (<code>as const</code>):</p>
+<ul>
+<li>type is narrowed</li>
+<li>object gets <code>readonly</code> properties</li>
+<li>array becomes <code>readonly</code> tuple</li>
+</ul>
+<p>```ts
+  // ❌ Avoid declaring constants without const assertion
+  const BASE_LOCATION = { x: 50, y: 130 }; // Type { x: number; y: number; }
+  BASE_LOCATION.x = 10;
+  const BASE_LOCATION = [50, 130]; // Type number[]
+  BASE_LOCATION.push(10);</p>
+<p>// ✅ Use const assertion
+  const BASE_LOCATION = { x: 50, y: 130 } as const; // Type '{ readonly x: 50; readonly y: 130; }'
+  const BASE_LOCATION = [50, 130] as const; // Type 'readonly [10, 20]'
+  ```</p>
+<h3 id="enums-const-assertion">Enums &amp; Const Assertion</h3>
+<p>Const assertion must be used over enum.</p>
+<p>While enums can still cover use cases as const assertion would, we tend to avoid it. Some of the reasonings as mentioned in TypeScript documentation - <a href="https://www.typescriptlang.org/docs/handbook/enums.html#const-enum-pitfalls">Const enum pitfalls</a>, <a href="https://www.typescriptlang.org/docs/handbook/enums.html#objects-vs-enums">Objects vs Enums</a>, <a href="https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings">Reverse mappings</a>...</p>
+<pre><code class="language-ts">// ❌ Avoid using enums
+enum UserRole {
+  GUEST,
+  MODERATOR,
+  ADMINISTRATOR,
+}
+
+enum Color {
+  PRIMARY = '#B33930',
+  SECONDARY = '#113A5C',
+  BRAND = '#9C0E7D',
+}
+
+// ✅ Use const assertion
+const USER_ROLES = ['guest', 'moderator', 'administrator'] as const;
+type UserRole = (typeof USER_ROLES)[number]; // Type &quot;guest&quot; | &quot;moderator&quot; | &quot;administrator&quot;
+
+// Use satisfies if UserRole type is already defined - e.g. database schema model
+type UserRoleDB = ReadonlyArray&lt;'guest' | 'moderator' | 'administrator'&gt;;
+const AVAILABLE_ROLES = ['guest', 'moderator'] as const satisfies UserRoleDB;
+
+const COLOR = {
+  primary: '#B33930',
+  secondary: '#113A5C',
+  brand: '#9C0E7D',
+} as const;
+type Color = typeof COLOR;
+type ColorKey = keyof Color; // Type &quot;PRIMARY&quot; | &quot;SECONDARY&quot; | &quot;BRAND&quot;
+type ColorValue = Color[ColorKey]; // Type &quot;#B33930&quot; | &quot;#113A5C&quot; | &quot;#9C0E7D&quot;
+</code></pre>
+<h3 id="null-undefined">Null &amp; Undefined</h3>
+<p>In TypeScript types <code>null</code> and <code>undefined</code> many times can be used interchangeably.<br />
+For consistency strive to:</p>
+<ul>
+<li>Use <code>null</code> to explicitly state it has no value - assignment, return function type etc.</li>
+<li>Use <code>undefined</code> assignment when trying to exclude fields. E.g. in form fields, request payload, querying database (<a href="https://www.prisma.io/docs/concepts/components/prisma-client/null-and-undefined">Prisma differentiation</a>)...</li>
+</ul>
+<h2 id="naming">Naming</h2>
+<p>Setting aside convention on cache invalidation, but for the second hardest thing, clear naming with important context should be provided.</p>
+<p>Strive to keep naming conventions consistent and readable, because another person will maintain the code you have written.</p>
+<h3 id="named-export">Named Export</h3>
+<p>Named exports must be used to ensure that all imports follow a uniform pattern (<a href="https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md">eslint rule</a>).<br />
+This keeps variables, functions... names consistent across the entire codebase.<br />
+Named exports have the benefit of erroring when import statements try to import something that hasn't been declared.</p>
+<p>In case of exceptions e.g. Next.js pages, disable rule:</p>
+<pre><code class="language-ts">// .eslintrc.js
+overrides: [
+  {
+    files: [&quot;src/pages/**/*&quot;],
+    rules: { &quot;import/no-default-export&quot;: &quot;off&quot; },
+  },
+],
+</code></pre>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>While it's often hard to find the best name, try optimize code for consistency and future reader by following conventions:</p>
+<h4 id="abbreviations-acronyms">Abbreviations &amp; Acronyms</h4>
+<p>Treat acronyms as whole words, with capitalized first letter only.</p>
+<pre><code class="language-ts">// ❌ Avoid
+const FAQList = ['qa-1', 'qa-2'];
+const generateUserURL(params) =&gt; {...}
+
+// ✅ Use
+const FaqList = ['qa-1', 'qa-2'];
+const generateUserUrl(params) =&gt; {...}
+</code></pre>
+<p>In favor of readability, strive to avoid abbreviations, unless they are widely accepted and necessary.</p>
+<pre><code class="language-ts">// ❌ Avoid
+const GetWin(params) =&gt; {...}
+
+// ✅ Use
+const GetWindow(params) =&gt; {...}
+</code></pre>
+<h4 id="variables_1">Variables</h4>
+<ul>
+<li><strong>Locals</strong><br />
+  Camel case<br />
+<code>products</code>, <code>productsFiltered</code></li>
+<li><strong>Booleans</strong><br />
+  Prefixed with <code>is</code>, <code>has</code> etc.<br />
+<code>isDisabled</code>, <code>hasProduct</code></li>
+<li><strong>Constants</strong><br />
+  Capitalized<br />
+<code>PRODUCT_ID</code></li>
+<li><strong>Object constants</strong></li>
+</ul>
+<p>Singular, capitalized with const assertion and optionally satisfies type (if there is one).</p>
+<p><code>ts
+  const ORDER_STATUS = {
+    pending: 'pending',
+    fulfilled: 'fulfilled',
+    error: 'error',
+  } as const satisfies OrderStatus;</code></p>
+<h4 id="functions_1">Functions</h4>
+<p>Camel case<br />
+<code>filterProductsByType</code>, <code>formatCurrency</code></p>
+<h4 id="generics">Generics</h4>
+<p>A name starts with the capital letter T <code>TRequest</code>, <code>TFooBar</code> (similar to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-5.0">.Net internal</a> implementation or <a href="https://google.github.io/styleguide/javaguide.html#s5.2.8-type-variable-names">Google style guide</a>).<br />
+ Avoid (popular convention) naming generics with one character <code>T</code>, <code>K</code> etc., the more variables we introduce, the easier it is to mistake them.</p>
+<pre><code class="language-ts">// ❌ Avoid naming generics with one character
+const createPair = &lt;T, K extends string&gt;(first: T, second: K): [T, K] =&gt; {
+  return [first, second];
+};
+const pair = createPair(1, 'a');
+
+// ✅ Name starts with the capital letter T
+const createPair = &lt;TFirst, TSecond extends string&gt;(first: TFirst, second: TSecond): [TFirst, TSecond] =&gt; {
+  return [first, second];
+};
+const pair = createPair(1, 'a');
+</code></pre>
+<p><a href="https://typescript-eslint.io/rules/naming-convention">Eslint rule</a> implements:</p>
+<pre><code class="language-ts">// .eslintrc.js
+'@typescript-eslint/naming-convention': [
+  'error',
+  {
+    selector: 'typeParameter',
+    format: ['PascalCase'],
+    custom: { regex: '^T[A-Z]', match: true },
+  },
+],
+</code></pre>
+<h4 id="react-components">React Components</h4>
+<p>Pascal case<br />
+<code>ProductItem</code>, <code>ProductsPage</code></p>
+<h4 id="prop-types">Prop Types</h4>
+<p>React component name following "Props" postfix<br />
+<code>[ComponentName]Props</code> - <code>ProductItemProps</code>, <code>ProductsPageProps</code></p>
+<h4 id="callback-props">Callback Props</h4>
+<p>Event handler (callback) props are prefixed as <code>on*</code> - e.g. <code>onClick</code>.<br />
+ Event handler implementation functions are prefixed as <code>handle*</code> - e.g. <code>handleClick</code> (<a href="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md">eslint rule</a>).</p>
+<pre><code class="language-tsx">// ❌ Avoid inconsistent callback prop naming
+&lt;Button click={actionClick} /&gt;
+&lt;MyComponent userSelectedOccurred={triggerUser} /&gt;
+
+// ✅ Use prop prefix 'on*' and handler prefix 'handle*'
+&lt;Button onClick={handleClick} /&gt;
+&lt;MyComponent onUserSelected={handleUserSelected} /&gt;
+</code></pre>
+<h4 id="react-hooks">React Hooks</h4>
+<p>Camel case, prefixed as 'use' (<a href="https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks">eslint rule</a>), symmetrically convention as <code>[value, setValue] = useState()</code> (<a href="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/hook-use-state.md#rule-details">eslint rule</a>)</p>
+<pre><code class="language-ts">// ❌ Avoid inconsistent useState hook naming
+const [userName, setUser] = useState();
+const [color, updateColor] = useState();
+const [visible, setVisible] = useState();
+
+// ✅ Use
+const [name, setName] = useState();
+const [color, setColor] = useState();
+const [isActive, setIsActive] = useState();
+</code></pre>
+<p>Custom hook must always return an object:</p>
+<pre><code class="language-ts">// ❌ Avoid
+const [products, errors] = useGetProducts();
+const [fontSizes] = useTheme();
+
+// ✅ Use
+const { products, errors } = useGetProducts();
+const { fontSizes } = useTheme();
+</code></pre>
+<h3 id="comments">Comments</h3>
+<p>Comments in general should be avoided. Try to write expressive code and name things what they are before adding comments.</p>
+<p>As an exception use comments only when you need to add context or explain choices that cannot be expressed through code.<br />
+Comments should always be complete sentences. As rule of a thumb try to explain <code>why</code> in comments, not <code>how</code> and <code>what</code>.</p>
+<pre><code class="language-ts">// ❌ Avoid
+// convert to minutes
+const m = s * 60;
+// avg users per minute
+const myAvg = u / m;
+
+// ✅ Use
+const SECONDS_IN_MINUTE = 60;
+const minutes = seconds * SECONDS_IN_MINUTE;
+const averageUsersPerMinute = noOfUsers / minutes;
+
+// TODO: Filtering should be moved to the backend once API changes are released.
+// Issue/PR - https://github.com/foo/repo/pulls/55124
+const filteredUsers = frontendFiltering(selectedUsernames);
+
+// Use Fourier transformation to minimize information loss - https://github.com/dntj/jsfft#usage
+const frequencies = signal.FFT();
+</code></pre>
+<h2 id="source-organization">Source Organization</h2>
+<h3 id="code-collocation">Code Collocation</h3>
+<ul>
+<li>Every application or package in monorepo has project files/folders organized and grouped by <strong>feature</strong>.</li>
+<li><strong>Collocate code as close as possible to where it's relevant.</strong></li>
+<li>Deep folder nesting should not represent an issue.</li>
+</ul>
+<h3 id="imports">Imports</h3>
+<p>Import paths can be relative, starting with <code>./</code> or <code>../</code>, or they can be absolute <code>@common/utils</code>.</p>
+<p>To make import statements more readable and easier to understand:</p>
+<ul>
+<li>Relative imports <code>./sortItems</code> must be used when importing files within the same feature, that are 'close' to each other, which also allows moving feature around the codebase without introducing changes in these imports.</li>
+<li>Absolute imports <code>@common/utils</code> must be used in all other cases.</li>
+<li>All imports must be auto sorted by tooling e.g. <a href="https://github.com/trivago/prettier-plugin-sort-imports">prettier-plugin-sort-imports</a>, <a href="https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md">eslint-plugin-import</a>...</li>
+</ul>
+<pre><code class="language-ts">// ❌ Avoid
+import { bar, foo } from '../../../../../../distant-folder';
+
+// ✅ Use
+import { locationApi } from '@api/locationApi';
+
+import { foo } from '../../foo';
+import { bar } from '../bar';
+import { baz } from './baz';
+</code></pre>
+<h3 id="project-structure">Project Structure</h3>
+<p>Example frontend monorepo project, where every application has following file/folder structure:</p>
+<pre><code class="language-shell">apps/
+├─ product-manager/
+│  ├─ common/
+│  │  ├─ components/
+│  │  │  ├─ Button/
+│  │  │  ├─ ProductTitle/
+│  │  │  ├─ ...
+│  │  │  └─ index.tsx
+│  │  ├─ consts/
+│  │  │  ├─ paths.ts
+│  │  │  └─ ...
+│  │  ├─ hooks/
+│  │  └─ types/
+│  ├─ modules/
+│  │  ├─ HomePage/
+│  │  ├─ ProductAddPage/
+│  │  ├─ ProductPage/
+│  │  ├─ ProductsPage/
+│  │  │  ├─ api/
+│  │  │  │  └─ useGetProducts/
+│  │  │  ├─ components/
+│  │  │  │  ├─ ProductItem/
+│  │  │  │  ├─ ProductsStatistics/
+│  │  │  │  └─ ...
+│  │  │  ├─ utils/
+│  │  │  │  └─ filterProductsByType/
+│  │  │  └─ index.tsx
+│  │  ├─ ...
+│  │  └─ index.tsx
+│  ├─ eslintrc.js
+│  ├─ package.json
+│  └─ tsconfig.json
+├─ warehouse/
+├─ admin-dashboard/
+└─ ...
+</code></pre>
+<ul>
+<li><code>modules</code> folder is responsible for implementation of each individual page, where all custom features for that page are being implemented (components, hooks, utils functions etc.).</li>
+<li><code>common</code> folder is responsible for implementations that are truly used across application. Since its a "global folder" it should be used sparingly.<br />
+  If same component e.g. <code>common/components/ProductTitle</code> starts being used on more the one page, it shall be moved to common folder.</li>
+</ul>
+<p>In case file-system based router (e.g. Nextjs) is being used as frontend framework, <code>pages</code> folder serves only as a router, where its responsibility is to define routes (no business logic implementation).</p>
+<h2 id="appendix-react">Appendix - React</h2>
+<p>Since React components and hooks are also functions, <a href="#functions">respective function conventions</a> applies.</p>
+<h3 id="props-type">Props Type</h3>
+<pre><code class="language-tsx">// ❌ Avoid using React.FC type
+type FooProps = {
+  name: string;
+  score: number;
+};
+
+export const Foo: React.FC&lt;FooProps&gt; = ({ name, score }) =&gt; {
+
+// ✅ Use props argument with type
+type FooProps = Readonly&lt;{
+  name: string;
+  score: number;
+}&gt;;
+
+export const Foo = ({ name, score }: FooProps) =&gt; {...
+</code></pre>
+<h3 id="props-required-optional">Props - Required &amp; Optional</h3>
+<p><strong>Strive to have majority of props required and use optional sparingly.</strong></p>
+<p>Especially when creating new component for first/single use case majority of props should be required. When component starts covering more use cases, introduce optional props.<br />
+There are potential exceptions, where component API needs to implement optional props from the start (e.g. shared components covering multiple use cases, UI design system components - button <code>isDisabled</code> etc.)</p>
+<p>As mentioned in function example - implementing 10 React components with 5 required props each, is better then implementing one "can do it all" function that accepts 50 optional props.<br />
+If component becomes to complex it probably should be broken into smaller pieces.</p>
+<p><strong>Use Discriminated Type</strong></p>
+<p>When applicable use <strong>discriminated type</strong> to eliminate optional props, which will decrease complexity on component API and only necessary/required props will be passed depending on its use case.</p>
+<pre><code class="language-ts">// ❌ Avoid optional props as they increase complexity of component API
+type StatusProps = {
+  data?: Products;
+  title?: string;
+  time?: number;
+  error?: string;
+};
+
+// ✅ Strive to have majority of props required, if that's not possible,
+// use discriminated union for clear intent on component usage
+type StatusSuccess = {
+  status: 'success';
+  data: Products;
+  title: string;
+};
+
+type StatusLoading = {
+  status: 'loading';
+  time: number;
+};
+
+type StatusError = {
+  status: 'error';
+  error: string;
+};
+
+type StatusProps = StatusSuccess | StatusLoading | StatusError;
+
+export const Status = (status: StatusProps) =&gt; {...
+</code></pre>
+<h3 id="component-types">Component Types</h3>
+<h4 id="container">Container</h4>
+<ul>
+<li>All container components have postfix "Container" or "Page" <code>[ComponentName]Container|Page</code>. Use "Page" postfix to indicate component it's an actual web page.</li>
+<li>Each feature has a container component (<code>AddUserContainer.tsx</code>, <code>EditProductContainer.tsx</code>, <code>ProductsPage.tsx</code> etc.)</li>
+<li>Includes business logic.</li>
+<li>API integration.</li>
+<li>Structure:
+  <code>ProductsPage/
+  ├─ api/
+  │  └─ useGetProducts/
+  ├─ components/
+  │  └─ ProductItem/
+  ├─ utils/
+  │  └─ filterProductsByType/
+  └─ index.tsx</code></li>
+</ul>
+<h4 id="ui-feature">UI - Feature</h4>
+<ul>
+<li>Representational components that are designed to fulfill feature requirements.</li>
+<li>Nested inside container component folder.</li>
+<li>Should follow <a href="#functions">functions conventions</a> as much as possible.</li>
+<li>No API integration.</li>
+<li>Structure:
+  <code>ProductItem/
+  ├─ index.tsx
+  ├─ ProductItem.stories.tsx
+  └─ ProductItem.test.tsx</code></li>
+</ul>
+<h4 id="ui-design-system">UI - Design system</h4>
+<ul>
+<li>Global Reusable/shared components used throughout whole codebase.</li>
+<li>Structure:
+  <code>Button/
+  ├─ index.tsx
+  ├─ Button.stories.tsx
+  └─ Button.test.tsx</code></li>
+</ul>
+<h3 id="store-pass-data">Store &amp; Pass Data</h3>
+<ul>
+<li>Utilize storing state in the URL, especially for filtering, sorting etc.</li>
+<li>Don't sync URL state with local state.</li>
+<li>Consider passing data simply through props, using the URL, or composing children. Use global state (Zustand, Context) as a last resort.</li>
+<li>Use React compound components when components should belong and work together: <code>menu</code>, <code>accordion</code>,<code>navigation</code>, <code>tabs</code>, <code>list</code>,...<br />
+  Always export compound components as:</li>
+</ul>
+<p>```tsx
+  // PriceList.tsx
+  const PriceListRoot = ({ children }) =&gt; <ul>{children}</ul>;
+  const PriceListItem = ({ title, amount }) =&gt; <li>Name: {name} - Amount: {amount}<li/>;</p>
+<p>// ❌
+  export const PriceList = {
+    Container: PriceListRoot,
+    Item: PriceListItem,
+  };
+  // ❌
+  PriceList.Item = Item;
+  export default PriceList;</p>
+<p>// ✅
+  export const PriceList = PriceListRoot as typeof PriceListRoot &amp; {
+    Item: typeof PriceListItem;
+  };
+  PriceList.Item = PriceListItem;</p>
+<p>// App.tsx
+  import { PriceList } from "./PriceList";</p>
+<p><PriceList>
+    <PriceList.Item title="Item 1" amount={8} />
+    <PriceList.Item title="Item 2" amount={12} />
+  </PriceList>;
+  ```</p>
+<ul>
+<li>UI components should show derived state and send events, nothing more.</li>
+<li>As in many programming languages functions args can be passed to the next function and on to the next etc.<br />
+  Rect components are no different, where prop drilling should not become an issue.<br />
+  If with app scaling prop drilling truly becomes an issue, try to refactor render method, local states in parent components, using composition etc.</li>
+<li>Data fetching is only allowed in container components.</li>
+<li>Use of server-state library is encouraged (<a href="https://github.com/tanstack/query">react-query</a>, <a href="https://github.com/apollographql/apollo-client">apollo client</a>...).</li>
+<li>use of client-state library for global state is discouraged.<br />
+  Reconsider if something should be truly global across application, e.g. <code>themeMode</code>, <code>Permissions</code> or even that can be put in server-state (e.g. user settings - <code>/me</code> endpoint). If still truly needed use <a href="https://github.com/pmndrs/zustand">Zustand</a> or Context (not Redux, Mobx etc.).</li>
+</ul>
+<h2 id="appendix-tests-unit-integration">Appendix - Tests (Unit &amp; Integration)</h2>
+<h3 id="what-how-to-test">What &amp; How To Test</h3>
+<p>Automated test comes with benefits that helps us write better code and makes it easy to refactor, while bugs are caught earlier in the process.<br />
+ Consider trade-offs of what and how to test to achieve confidence application is working as intended, while writing and maintaining tests doesn't slow the team down.</p>
+<p>✅ Do:</p>
+<ul>
+<li>Implement test to be short, simple, and pleasant to work with. Intent of a test should be immediately visible.</li>
+<li>Strive to write tests in a way your app/package is used by a user, meaning test business logic.<br />
+  E.g. given some user input, they receive the expected output for a process.</li>
+<li>All tests must be setup and implemented to run as standalone in isolation, where they don't depend on other tests order of execution.</li>
+<li>Tests should be resilient to changes.<br />
+  Query HTML elements based on attributes that are unlikely to change. Order of priority must be followed as specified in <a href="https://testing-library.com/docs/queries/about/#priority">Testing Library</a> - <a href="https://testing-library.com/docs/queries/byrole">role</a>, <a href="https://testing-library.com/docs/queries/bylabeltext">label</a>, <a href="https://testing-library.com/docs/queries/byplaceholdertext">placeholder</a>, <a href="https://testing-library.com/docs/queries/bytext">text contents</a>, <a href="https://testing-library.com/docs/queries/bydisplayvalue">display value</a>, <a href="https://testing-library.com/docs/queries/byalttext">alt text</a>, <a href="https://testing-library.com/docs/queries/bytitle">title</a>, <a href="https://testing-library.com/docs/queries/bytestid">test ID</a>.</li>
+</ul>
+<p>❌ Don't:</p>
+<ul>
+<li>Don't test implementation details. When refactoring code, tests shouldn't change.</li>
+<li>Don't re-test the library/framework.</li>
+<li>Don't mandate 100% code coverage for applications.</li>
+<li>Don't test just to test.</li>
+</ul>
+<p><code>ts
+  // ❌ Avoid
+  it('should render user list', () =&gt; {
+    render(&lt;UserList /&gt;);
+    expect(screen.getByText('Users List')).toBeInTheDocument();
+  });</code></p>
+<h3 id="test-description">Test Description</h3>
+<p>All test descriptions must follow naming convention as <code>it('should ... when ...')</code>.<br />
+<a href="https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-title.md#mustmatch--mustnotmatch">Eslint rule</a> implements regex:</p>
+<pre><code class="language-ts">// .eslintrc.js
+'jest/valid-title': [
+  'error',
+  {
+    mustMatch: { it: [/should.*when/u.source, &quot;Test title must include 'should' and 'when'&quot;] },
+  },
+],
+</code></pre>
+<pre><code class="language-ts">// ❌ Avoid
+it('accepts ISO date format where date is parsed and formatted as YYYY-MM');
+it('after title is confirmed user description is rendered');
+
+// ✅ Name test description as it('should ... when ...')
+it('should return parsed date as YYYY-MM when input is in ISO date format');
+it('should render user description when title is confirmed');
+</code></pre>
+<h3 id="tooling-extension">Tooling Extension</h3>
+<p>Test can be run through npm scripts, but to improve development experience it's highly encouraged to use <a href="https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner">Jest Runner</a> VS code extension so any single test can be run <a href="https://github.com/mkosir/typescript-style-guide/raw/main/misc/vscode-jest-runner.gif">instantly</a>, especially if testing app/package in larger codebase (monorepo).</p>
+<pre><code class="language-sh">code --install-extension firsttris.vscode-jest-runner
+</code></pre>
+<h3 id="snapshot">Snapshot</h3>
+<p>Snapshot tests are discouraged in order to avoid fragility, which leads to "just update it" turn of mind, to achieve all the tests pass.<br />
+ Exceptions can be made, with strong rational behind it, where test output has short and clear intent, whats actually being tested (e.g. design system library critical elements that shouldn't deviate).</p>
 
 
 
