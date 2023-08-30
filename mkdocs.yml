@@ -27,6 +27,9 @@ theme:
 nav:
   - Home: index.md
   - Programming:
+    - Typescript:
+      - Style Guide: programming/typescript/style_guide.md
+      - The Concise TypeScript Book: programming/typescript/the_concise_typeScript_book.md
     - Javascript:
       - Map: programming/javascript/map.md
       - Set: programming/javascript/set.md
