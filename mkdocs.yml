@@ -33,6 +33,9 @@ nav:
     - Javascript:
       - Map: programming/javascript/map.md
       - Set: programming/javascript/set.md
+      - Awesome JavaScript: programming/javascript/awesome_javaScript.md
+      - Clean Code Javascript: programming/javascript/clean_code_javascript.md
+      - Javascript Questions: programming/javascript/javascript_questions.md
     - npm:
       - Dependency Cruiser: programming/npm/dependency_cruiser.md
       - Concurrently: programming/npm/concurrently.md
@@ -47,6 +50,9 @@ nav:
       - Github pages: programming/react/github_pages.md
     - bash:
       - bash examples: programming/bash/30_bash_examples.md
+      - Awesome Shell: programming/bash/awesome_shell.md
+      - cli apps: programming/bash/awesome_cli_apps.md
+      - Terminals Are Sexy: programming/bash/terminals_are_sexy.md
     - python:
       - rangos: programming/python/rangos.md
       - listas: programming/python/listas.md
@@ -73,6 +79,7 @@ nav:
   - git: 
     - tips: git/git.md
     - tips 2: git/tips.md
+    - Awesome git Addons: git/awesome_git_addons.md
 
   - Operating systems:
     - Linux:
