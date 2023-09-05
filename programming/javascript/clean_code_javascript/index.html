@@ -1,0 +1,4157 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yubisel.gitlab.io/programming/javascript/clean_code_javascript/">
+      
+      
+        <link rel="prev" href="../awesome_javaScript/">
+      
+      
+        <link rel="next" href="../javascript_questions/">
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
+    
+    
+      
+        <title>Clean Code Javascript - &#60;dev notes/&#62;</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clean-code-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="&amp;#60;dev notes/&amp;#62;" class="md-header__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            &#60;dev notes/&#62;
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Clean Code Javascript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/yubisel/mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yubisel.gitlab.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="&amp;#60;dev notes/&amp;#62;" class="md-nav__button md-logo" aria-label="&#60;dev notes/&#62;" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    &#60;dev notes/&#62;
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/yubisel/mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yubisel.gitlab.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Typescript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Typescript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../typescript/style_guide/" class="md-nav__link">
+        Style Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../typescript/the_concise_typeScript_book/" class="md-nav__link">
+        The Concise TypeScript Book
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map/" class="md-nav__link">
+        Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set/" class="md-nav__link">
+        Set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../awesome_javaScript/" class="md-nav__link">
+        Awesome JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Clean Code Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Clean Code Javascript
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objects-and-data-structures" class="md-nav__link">
+    Objects and Data Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solid" class="md-nav__link">
+    SOLID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    Concurrency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    Error Handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript_questions/" class="md-nav__link">
+        Javascript Questions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          npm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          npm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npm/dependency_cruiser/" class="md-nav__link">
+        Dependency Cruiser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npm/concurrently/" class="md-nav__link">
+        Concurrently
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/dates/" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/global_dates/" class="md-nav__link">
+        Fechas en aplicacion desde varios lugares del mundo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/pretty/" class="md-nav__link">
+        Pretty format arrays and objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/constants/" class="md-nav__link">
+        Constants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../composer/composer/" class="md-nav__link">
+        Composer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/newline_to_break/" class="md-nav__link">
+        Newline to break (nl2br)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/github_pages/" class="md-nav__link">
+        Github pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+          bash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          bash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/30_bash_examples/" class="md-nav__link">
+        bash examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/awesome_shell/" class="md-nav__link">
+        Awesome Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/awesome_cli_apps/" class="md-nav__link">
+        cli apps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/terminals_are_sexy/" class="md-nav__link">
+        Terminals Are Sexy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+          python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/rangos/" class="md-nav__link">
+        rangos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/listas/" class="md-nav__link">
+        listas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tuplas/" class="md-nav__link">
+        tuplas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/diccionarios/" class="md-nav__link">
+        diccionarios
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+          html
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../html/text_tags/" class="md-nav__link">
+        Text tags
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+          node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node/generating_optimized_image_formats_with_node/" class="md-nav__link">
+        Generating Optimized Image Formats with Node.js
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Technologies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Technologies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technologies/ionic/ionic/" class="md-nav__link">
+        ionic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/mysql/" class="md-nav__link">
+        MySql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/sql_server/" class="md-nav__link">
+        SQL Server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_notes/" class="md-nav__link">
+        Notas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_notes_2/" class="md-nav__link">
+        Notas 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_install/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git/" class="md-nav__link">
+        tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/tips/" class="md-nav__link">
+        tips 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/awesome_git_addons/" class="md-nav__link">
+        Awesome git Addons
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Operating systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Operating systems
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/linux/bash/ps1/" class="md-nav__link">
+        bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/linux/gnome/extensions/" class="md-nav__link">
+        Gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/linux/estructura_de_directorios/" class="md-nav__link">
+        Estructura de ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/linux/cdpath/" class="md-nav__link">
+        CDPATH
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          Ubuntu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ubuntu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/my_config/" class="md-nav__link">
+        My config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/clipboard/" class="md-nav__link">
+        Clipboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/rename_several_files_from_console/" class="md-nav__link">
+        Rename several files from console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/top_process/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/lamp/" class="md-nav__link">
+        lamp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/create_a_self_signed_ssl_certificate_for_apache/" class="md-nav__link">
+        apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/ubuntu/ubuntu_splash_screen/" class="md-nav__link">
+        Splash screen
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/windows/enable_version_selection_in_the_installer/" class="md-nav__link">
+        Enable version selection in the installer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating_systems/windows/install_net_framework/" class="md-nav__link">
+        Install .NET Framework 3.5 via DISM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Commands/Bash programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Commands/Bash programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          ssh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          ssh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/ssh/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/ssh/copy_the_public_key/" class="md-nav__link">
+        Copy the public key to server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/dd/" class="md-nav__link">
+        dd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/pwgen/" class="md-nav__link">
+        pwgen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/seq/" class="md-nav__link">
+        seq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/ncdu/" class="md-nav__link">
+        ncdu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/grep/directory_word_search/" class="md-nav__link">
+        grep
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/jq/" class="md-nav__link">
+        jq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/mktemp/" class="md-nav__link">
+        mktemp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/tar/" class="md-nav__link">
+        tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/uniq/" class="md-nav__link">
+        uniq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commands/others/" class="md-nav__link">
+        others
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programs/phpmyadmin/" class="md-nav__link">
+        phpmyadmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programs/flameshot/" class="md-nav__link">
+        Flameshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+          Apache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programs/apache/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programs/apache/permits/" class="md-nav__link">
+        Permisos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          ToDo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          ToDo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../todo/films_to_watch/" class="md-nav__link">
+        Films to watch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/others/" class="md-nav__link">
+        Others
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/api/" class="md-nav__link">
+        api
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="clean-code-javascript">clean-code-javascript</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#objects-and-data-structures">Objects and Data Structures</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#solid">SOLID</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#concurrency">Concurrency</a></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#formatting">Formatting</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#translation">Translation</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>Software engineering principles, from Robert C. Martin's book
+<a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><em>Clean Code</em></a>,
+adapted for JavaScript. This is not a style guide. It's a guide to producing
+<a href="https://github.com/ryanmcdermott/3rs-of-software-architecture">readable, reusable, and refactorable</a> software in JavaScript.</p>
+<p>Not every principle herein has to be strictly followed, and even fewer will be
+universally agreed upon. These are guidelines and nothing more, but they are
+ones codified over many years of collective experience by the authors of
+<em>Clean Code</em>.</p>
+<p>Our craft of software engineering is just a bit over 50 years old, and we are
+still learning a lot. When software architecture is as old as architecture
+itself, maybe then we will have harder rules to follow. For now, let these
+guidelines serve as a touchstone by which to assess the quality of the
+JavaScript code that you and your team produce.</p>
+<p>One more thing: knowing these won't immediately make you a better software
+developer, and working with them for many years doesn't mean you won't make
+mistakes. Every piece of code starts as a first draft, like wet clay getting
+shaped into its final form. Finally, we chisel away the imperfections when
+we review it with our peers. Don't beat yourself up for first drafts that need
+improvement. Beat up the code instead!</p>
+<h2 id="variables"><strong>Variables</strong></h2>
+<h3 id="use-meaningful-and-pronounceable-variable-names">Use meaningful and pronounceable variable names</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const yyyymmdstr = moment().format(&quot;YYYY/MM/DD&quot;);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const currentDate = moment().format(&quot;YYYY/MM/DD&quot;);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="use-the-same-vocabulary-for-the-same-type-of-variable">Use the same vocabulary for the same type of variable</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">getUserInfo();
+getClientData();
+getCustomerRecord();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">getUser();
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="use-searchable-names">Use searchable names</h3>
+<p>We will read more code than we will ever write. It's important that the code we
+do write is readable and searchable. By <em>not</em> naming variables that end up
+being meaningful for understanding our program, we hurt our readers.
+Make your names searchable. Tools like
+<a href="https://github.com/danielstjules/buddy.js">buddy.js</a> and
+<a href="https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md">ESLint</a>
+can help identify unnamed constants.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">// What the heck is 86400000 for?
+setTimeout(blastOff, 86400000);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">// Declare them as capitalized named constants.
+const MILLISECONDS_PER_DAY = 60 * 60 * 24 * 1000; //86400000;
+
+setTimeout(blastOff, MILLISECONDS_PER_DAY);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="use-explanatory-variables">Use explanatory variables</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const address = &quot;One Infinite Loop, Cupertino 95014&quot;;
+const cityZipCodeRegex = /^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/;
+saveCityZipCode(
+  address.match(cityZipCodeRegex)[1],
+  address.match(cityZipCodeRegex)[2]
+);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const address = &quot;One Infinite Loop, Cupertino 95014&quot;;
+const cityZipCodeRegex = /^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/;
+const [_, city, zipCode] = address.match(cityZipCodeRegex) || [];
+saveCityZipCode(city, zipCode);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-mental-mapping">Avoid Mental Mapping</h3>
+<p>Explicit is better than implicit.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const locations = [&quot;Austin&quot;, &quot;New York&quot;, &quot;San Francisco&quot;];
+locations.forEach(l =&gt; {
+  doStuff();
+  doSomeOtherStuff();
+  // ...
+  // ...
+  // ...
+  // Wait, what is `l` for again?
+  dispatch(l);
+});
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const locations = [&quot;Austin&quot;, &quot;New York&quot;, &quot;San Francisco&quot;];
+locations.forEach(location =&gt; {
+  doStuff();
+  doSomeOtherStuff();
+  // ...
+  // ...
+  // ...
+  dispatch(location);
+});
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-add-unneeded-context">Don't add unneeded context</h3>
+<p>If your class/object name tells you something, don't repeat that in your
+variable name.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const Car = {
+  carMake: &quot;Honda&quot;,
+  carModel: &quot;Accord&quot;,
+  carColor: &quot;Blue&quot;
+};
+
+function paintCar(car, color) {
+  car.carColor = color;
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const Car = {
+  make: &quot;Honda&quot;,
+  model: &quot;Accord&quot;,
+  color: &quot;Blue&quot;
+};
+
+function paintCar(car, color) {
+  car.color = color;
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="use-default-parameters-instead-of-short-circuiting-or-conditionals">Use default parameters instead of short circuiting or conditionals</h3>
+<p>Default parameters are often cleaner than short circuiting. Be aware that if you
+use them, your function will only provide default values for <code>undefined</code>
+arguments. Other "falsy" values such as <code>''</code>, <code>""</code>, <code>false</code>, <code>null</code>, <code>0</code>, and
+<code>NaN</code>, will not be replaced by a default value.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function createMicrobrewery(name) {
+  const breweryName = name || &quot;Hipster Brew Co.&quot;;
+  // ...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function createMicrobrewery(name = &quot;Hipster Brew Co.&quot;) {
+  // ...
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="functions"><strong>Functions</strong></h2>
+<h3 id="function-arguments-2-or-fewer-ideally">Function arguments (2 or fewer ideally)</h3>
+<p>Limiting the amount of function parameters is incredibly important because it
+makes testing your function easier. Having more than three leads to a
+combinatorial explosion where you have to test tons of different cases with
+each separate argument.</p>
+<p>One or two arguments is the ideal case, and three should be avoided if possible.
+Anything more than that should be consolidated. Usually, if you have
+more than two arguments then your function is trying to do too much. In cases
+where it's not, most of the time a higher-level object will suffice as an
+argument.</p>
+<p>Since JavaScript allows you to make objects on the fly, without a lot of class
+boilerplate, you can use an object if you are finding yourself needing a
+lot of arguments.</p>
+<p>To make it obvious what properties the function expects, you can use the ES2015/ES6
+destructuring syntax. This has a few advantages:</p>
+<ol>
+<li>When someone looks at the function signature, it's immediately clear what
+   properties are being used.</li>
+<li>It can be used to simulate named parameters.</li>
+<li>Destructuring also clones the specified primitive values of the argument
+   object passed into the function. This can help prevent side effects. Note:
+   objects and arrays that are destructured from the argument object are NOT
+   cloned.</li>
+<li>Linters can warn you about unused properties, which would be impossible
+   without destructuring.</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function createMenu(title, body, buttonText, cancellable) {
+  // ...
+}
+
+createMenu(&quot;Foo&quot;, &quot;Bar&quot;, &quot;Baz&quot;, true);
+
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function createMenu({ title, body, buttonText, cancellable }) {
+  // ...
+}
+
+createMenu({
+  title: &quot;Foo&quot;,
+  body: &quot;Bar&quot;,
+  buttonText: &quot;Baz&quot;,
+  cancellable: true
+});
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="functions-should-do-one-thing">Functions should do one thing</h3>
+<p>This is by far the most important rule in software engineering. When functions
+do more than one thing, they are harder to compose, test, and reason about.
+When you can isolate a function to just one action, it can be refactored
+easily and your code will read much cleaner. If you take nothing else away from
+this guide other than this, you'll be ahead of many developers.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function emailClients(clients) {
+  clients.forEach(client =&gt; {
+    const clientRecord = database.lookup(client);
+    if (clientRecord.isActive()) {
+      email(client);
+    }
+  });
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function emailActiveClients(clients) {
+  clients.filter(isActiveClient).forEach(email);
+}
+
+function isActiveClient(client) {
+  const clientRecord = database.lookup(client);
+  return clientRecord.isActive();
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="function-names-should-say-what-they-do">Function names should say what they do</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function addToDate(date, month) {
+  // ...
+}
+
+const date = new Date();
+
+// It's hard to tell from the function name what is added
+addToDate(date, 1);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function addMonthToDate(month, date) {
+  // ...
+}
+
+const date = new Date();
+addMonthToDate(1, date);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="functions-should-only-be-one-level-of-abstraction">Functions should only be one level of abstraction</h3>
+<p>When you have more than one level of abstraction your function is usually
+doing too much. Splitting up functions leads to reusability and easier
+testing.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function parseBetterJSAlternative(code) {
+  const REGEXES = [
+    // ...
+  ];
+
+  const statements = code.split(&quot; &quot;);
+  const tokens = [];
+  REGEXES.forEach(REGEX =&gt; {
+    statements.forEach(statement =&gt; {
+      // ...
+    });
+  });
+
+  const ast = [];
+  tokens.forEach(token =&gt; {
+    // lex...
+  });
+
+  ast.forEach(node =&gt; {
+    // parse...
+  });
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function parseBetterJSAlternative(code) {
+  const tokens = tokenize(code);
+  const syntaxTree = parse(tokens);
+  syntaxTree.forEach(node =&gt; {
+    // parse...
+  });
+}
+
+function tokenize(code) {
+  const REGEXES = [
+    // ...
+  ];
+
+  const statements = code.split(&quot; &quot;);
+  const tokens = [];
+  REGEXES.forEach(REGEX =&gt; {
+    statements.forEach(statement =&gt; {
+      tokens.push(/* ... */);
+    });
+  });
+
+  return tokens;
+}
+
+function parse(tokens) {
+  const syntaxTree = [];
+  tokens.forEach(token =&gt; {
+    syntaxTree.push(/* ... */);
+  });
+
+  return syntaxTree;
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="remove-duplicate-code">Remove duplicate code</h3>
+<p>Do your absolute best to avoid duplicate code. Duplicate code is bad because it
+means that there's more than one place to alter something if you need to change
+some logic.</p>
+<p>Imagine if you run a restaurant and you keep track of your inventory: all your
+tomatoes, onions, garlic, spices, etc. If you have multiple lists that
+you keep this on, then all have to be updated when you serve a dish with
+tomatoes in them. If you only have one list, there's only one place to update!</p>
+<p>Oftentimes you have duplicate code because you have two or more slightly
+different things, that share a lot in common, but their differences force you
+to have two or more separate functions that do much of the same things. Removing
+duplicate code means creating an abstraction that can handle this set of
+different things with just one function/module/class.</p>
+<p>Getting the abstraction right is critical, that's why you should follow the
+SOLID principles laid out in the <em>Classes</em> section. Bad abstractions can be
+worse than duplicate code, so be careful! Having said this, if you can make
+a good abstraction, do it! Don't repeat yourself, otherwise you'll find yourself
+updating multiple places anytime you want to change one thing.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function showDeveloperList(developers) {
+  developers.forEach(developer =&gt; {
+    const expectedSalary = developer.calculateExpectedSalary();
+    const experience = developer.getExperience();
+    const githubLink = developer.getGithubLink();
+    const data = {
+      expectedSalary,
+      experience,
+      githubLink
+    };
+
+    render(data);
+  });
+}
+
+function showManagerList(managers) {
+  managers.forEach(manager =&gt; {
+    const expectedSalary = manager.calculateExpectedSalary();
+    const experience = manager.getExperience();
+    const portfolio = manager.getMBAProjects();
+    const data = {
+      expectedSalary,
+      experience,
+      portfolio
+    };
+
+    render(data);
+  });
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function showEmployeeList(employees) {
+  employees.forEach(employee =&gt; {
+    const expectedSalary = employee.calculateExpectedSalary();
+    const experience = employee.getExperience();
+
+    const data = {
+      expectedSalary,
+      experience
+    };
+
+    switch (employee.type) {
+      case &quot;manager&quot;:
+        data.portfolio = employee.getMBAProjects();
+        break;
+      case &quot;developer&quot;:
+        data.githubLink = employee.getGithubLink();
+        break;
+    }
+
+    render(data);
+  });
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="set-default-objects-with-objectassign">Set default objects with Object.assign</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const menuConfig = {
+  title: null,
+  body: &quot;Bar&quot;,
+  buttonText: null,
+  cancellable: true
+};
+
+function createMenu(config) {
+  config.title = config.title || &quot;Foo&quot;;
+  config.body = config.body || &quot;Bar&quot;;
+  config.buttonText = config.buttonText || &quot;Baz&quot;;
+  config.cancellable =
+    config.cancellable !== undefined ? config.cancellable : true;
+}
+
+createMenu(menuConfig);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const menuConfig = {
+  title: &quot;Order&quot;,
+  // User did not include 'body' key
+  buttonText: &quot;Send&quot;,
+  cancellable: true
+};
+
+function createMenu(config) {
+  let finalConfig = Object.assign(
+    {
+      title: &quot;Foo&quot;,
+      body: &quot;Bar&quot;,
+      buttonText: &quot;Baz&quot;,
+      cancellable: true
+    },
+    config
+  );
+  return finalConfig
+  // config now equals: {title: &quot;Order&quot;, body: &quot;Bar&quot;, buttonText: &quot;Send&quot;, cancellable: true}
+  // ...
+}
+
+createMenu(menuConfig);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-use-flags-as-function-parameters">Don't use flags as function parameters</h3>
+<p>Flags tell your user that this function does more than one thing. Functions should do one thing. Split out your functions if they are following different code paths based on a boolean.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function createFile(name, temp) {
+  if (temp) {
+    fs.create(`./temp/${name}`);
+  } else {
+    fs.create(name);
+  }
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function createFile(name) {
+  fs.create(name);
+}
+
+function createTempFile(name) {
+  createFile(`./temp/${name}`);
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-side-effects-part-1">Avoid Side Effects (part 1)</h3>
+<p>A function produces a side effect if it does anything other than take a value in
+and return another value or values. A side effect could be writing to a file,
+modifying some global variable, or accidentally wiring all your money to a
+stranger.</p>
+<p>Now, you do need to have side effects in a program on occasion. Like the previous
+example, you might need to write to a file. What you want to do is to
+centralize where you are doing this. Don't have several functions and classes
+that write to a particular file. Have one service that does it. One and only one.</p>
+<p>The main point is to avoid common pitfalls like sharing state between objects
+without any structure, using mutable data types that can be written to by anything,
+and not centralizing where your side effects occur. If you can do this, you will
+be happier than the vast majority of other programmers.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">// Global variable referenced by following function.
+// If we had another function that used this name, now it'd be an array and it could break it.
+let name = &quot;Ryan McDermott&quot;;
+
+function splitIntoFirstAndLastName() {
+  name = name.split(&quot; &quot;);
+}
+
+splitIntoFirstAndLastName();
+
+console.log(name); // ['Ryan', 'McDermott'];
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function splitIntoFirstAndLastName(name) {
+  return name.split(&quot; &quot;);
+}
+
+const name = &quot;Ryan McDermott&quot;;
+const newName = splitIntoFirstAndLastName(name);
+
+console.log(name); // 'Ryan McDermott';
+console.log(newName); // ['Ryan', 'McDermott'];
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-side-effects-part-2">Avoid Side Effects (part 2)</h3>
+<p>In JavaScript, some values are unchangeable (immutable) and some are changeable 
+(mutable). Objects and arrays are two kinds of mutable values so it's important 
+to handle them carefully when they're passed as parameters to a function. A 
+JavaScript function can change an object's properties or alter the contents of 
+an array which could easily cause bugs elsewhere.</p>
+<p>Suppose there's a function that accepts an array parameter representing a 
+shopping cart. If the function makes a change in that shopping cart array - 
+by adding an item to purchase, for example - then any other function that 
+uses that same <code>cart</code> array will be affected by this addition. That may be 
+great, however it could also be bad. Let's imagine a bad situation:</p>
+<p>The user clicks the "Purchase" button which calls a <code>purchase</code> function that
+spawns a network request and sends the <code>cart</code> array to the server. Because
+of a bad network connection, the <code>purchase</code> function has to keep retrying the
+request. Now, what if in the meantime the user accidentally clicks an "Add to Cart"
+button on an item they don't actually want before the network request begins?
+If that happens and the network request begins, then that purchase function
+will send the accidentally added item because the <code>cart</code> array was modified.</p>
+<p>A great solution would be for the <code>addItemToCart</code> function to always clone the 
+<code>cart</code>, edit it, and return the clone. This would ensure that functions that are still
+using the old shopping cart wouldn't be affected by the changes.</p>
+<p>Two caveats to mention to this approach:</p>
+<ol>
+<li>
+<p>There might be cases where you actually want to modify the input object,
+   but when you adopt this programming practice you will find that those cases
+   are pretty rare. Most things can be refactored to have no side effects!</p>
+</li>
+<li>
+<p>Cloning big objects can be very expensive in terms of performance. Luckily,
+   this isn't a big issue in practice because there are
+   <a href="https://facebook.github.io/immutable-js/">great libraries</a> that allow
+   this kind of programming approach to be fast and not as memory intensive as
+   it would be for you to manually clone objects and arrays.</p>
+</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const addItemToCart = (cart, item) =&gt; {
+  cart.push({ item, date: Date.now() });
+};
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const addItemToCart = (cart, item) =&gt; {
+  return [...cart, { item, date: Date.now() }];
+};
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-write-to-global-functions">Don't write to global functions</h3>
+<p>Polluting globals is a bad practice in JavaScript because you could clash with another
+library and the user of your API would be none-the-wiser until they get an
+exception in production. Let's think about an example: what if you wanted to
+extend JavaScript's native Array method to have a <code>diff</code> method that could
+show the difference between two arrays? You could write your new function
+to the <code>Array.prototype</code>, but it could clash with another library that tried
+to do the same thing. What if that other library was just using <code>diff</code> to find
+the difference between the first and last elements of an array? This is why it
+would be much better to just use ES2015/ES6 classes and simply extend the <code>Array</code> global.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">Array.prototype.diff = function diff(comparisonArray) {
+  const hash = new Set(comparisonArray);
+  return this.filter(elem =&gt; !hash.has(elem));
+};
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class SuperArray extends Array {
+  diff(comparisonArray) {
+    const hash = new Set(comparisonArray);
+    return this.filter(elem =&gt; !hash.has(elem));
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="favor-functional-programming-over-imperative-programming">Favor functional programming over imperative programming</h3>
+<p>JavaScript isn't a functional language in the way that Haskell is, but it has
+a functional flavor to it. Functional languages can be cleaner and easier to test.
+Favor this style of programming when you can.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const programmerOutput = [
+  {
+    name: &quot;Uncle Bobby&quot;,
+    linesOfCode: 500
+  },
+  {
+    name: &quot;Suzie Q&quot;,
+    linesOfCode: 1500
+  },
+  {
+    name: &quot;Jimmy Gosling&quot;,
+    linesOfCode: 150
+  },
+  {
+    name: &quot;Gracie Hopper&quot;,
+    linesOfCode: 1000
+  }
+];
+
+let totalOutput = 0;
+
+for (let i = 0; i &lt; programmerOutput.length; i++) {
+  totalOutput += programmerOutput[i].linesOfCode;
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const programmerOutput = [
+  {
+    name: &quot;Uncle Bobby&quot;,
+    linesOfCode: 500
+  },
+  {
+    name: &quot;Suzie Q&quot;,
+    linesOfCode: 1500
+  },
+  {
+    name: &quot;Jimmy Gosling&quot;,
+    linesOfCode: 150
+  },
+  {
+    name: &quot;Gracie Hopper&quot;,
+    linesOfCode: 1000
+  }
+];
+
+const totalOutput = programmerOutput.reduce(
+  (totalLines, output) =&gt; totalLines + output.linesOfCode,
+  0
+);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="encapsulate-conditionals">Encapsulate conditionals</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">if (fsm.state === &quot;fetching&quot; &amp;&amp; isEmpty(listNode)) {
+  // ...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function shouldShowSpinner(fsm, listNode) {
+  return fsm.state === &quot;fetching&quot; &amp;&amp; isEmpty(listNode);
+}
+
+if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
+  // ...
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-negative-conditionals">Avoid negative conditionals</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function isDOMNodeNotPresent(node) {
+  // ...
+}
+
+if (!isDOMNodeNotPresent(node)) {
+  // ...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function isDOMNodePresent(node) {
+  // ...
+}
+
+if (isDOMNodePresent(node)) {
+  // ...
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-conditionals">Avoid conditionals</h3>
+<p>This seems like an impossible task. Upon first hearing this, most people say,
+"how am I supposed to do anything without an <code>if</code> statement?" The answer is that
+you can use polymorphism to achieve the same task in many cases. The second
+question is usually, "well that's great but why would I want to do that?" The
+answer is a previous clean code concept we learned: a function should only do
+one thing. When you have classes and functions that have <code>if</code> statements, you
+are telling your user that your function does more than one thing. Remember,
+just do one thing.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class Airplane {
+  // ...
+  getCruisingAltitude() {
+    switch (this.type) {
+      case &quot;777&quot;:
+        return this.getMaxAltitude() - this.getPassengerCount();
+      case &quot;Air Force One&quot;:
+        return this.getMaxAltitude();
+      case &quot;Cessna&quot;:
+        return this.getMaxAltitude() - this.getFuelExpenditure();
+    }
+  }
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class Airplane {
+  // ...
+}
+
+class Boeing777 extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude() - this.getPassengerCount();
+  }
+}
+
+class AirForceOne extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude();
+  }
+}
+
+class Cessna extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude() - this.getFuelExpenditure();
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-type-checking-part-1">Avoid type-checking (part 1)</h3>
+<p>JavaScript is untyped, which means your functions can take any type of argument.
+Sometimes you are bitten by this freedom and it becomes tempting to do
+type-checking in your functions. There are many ways to avoid having to do this.
+The first thing to consider is consistent APIs.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function travelToTexas(vehicle) {
+  if (vehicle instanceof Bicycle) {
+    vehicle.pedal(this.currentLocation, new Location(&quot;texas&quot;));
+  } else if (vehicle instanceof Car) {
+    vehicle.drive(this.currentLocation, new Location(&quot;texas&quot;));
+  }
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function travelToTexas(vehicle) {
+  vehicle.move(this.currentLocation, new Location(&quot;texas&quot;));
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-type-checking-part-2">Avoid type-checking (part 2)</h3>
+<p>If you are working with basic primitive values like strings and integers,
+and you can't use polymorphism but you still feel the need to type-check,
+you should consider using TypeScript. It is an excellent alternative to normal
+JavaScript, as it provides you with static typing on top of standard JavaScript
+syntax. The problem with manually type-checking normal JavaScript is that
+doing it well requires so much extra verbiage that the faux "type-safety" you get
+doesn't make up for the lost readability. Keep your JavaScript clean, write
+good tests, and have good code reviews. Otherwise, do all of that but with
+TypeScript (which, like I said, is a great alternative!).</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function combine(val1, val2) {
+  if (
+    (typeof val1 === &quot;number&quot; &amp;&amp; typeof val2 === &quot;number&quot;) ||
+    (typeof val1 === &quot;string&quot; &amp;&amp; typeof val2 === &quot;string&quot;)
+  ) {
+    return val1 + val2;
+  }
+
+  throw new Error(&quot;Must be of type String or Number&quot;);
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function combine(val1, val2) {
+  return val1 + val2;
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-over-optimize">Don't over-optimize</h3>
+<p>Modern browsers do a lot of optimization under-the-hood at runtime. A lot of
+times, if you are optimizing then you are just wasting your time. <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers">There are good
+resources</a>
+for seeing where optimization is lacking. Target those in the meantime, until
+they are fixed if they can be.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">// On old browsers, each iteration with uncached `list.length` would be costly
+// because of `list.length` recomputation. In modern browsers, this is optimized.
+for (let i = 0, len = list.length; i &lt; len; i++) {
+  // ...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">for (let i = 0; i &lt; list.length; i++) {
+  // ...
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="remove-dead-code">Remove dead code</h3>
+<p>Dead code is just as bad as duplicate code. There's no reason to keep it in
+your codebase. If it's not being called, get rid of it! It will still be safe
+in your version history if you still need it.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function oldRequestModule(url) {
+  // ...
+}
+
+function newRequestModule(url) {
+  // ...
+}
+
+const req = newRequestModule;
+inventoryTracker(&quot;apples&quot;, req, &quot;www.inventory-awesome.io&quot;);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function newRequestModule(url) {
+  // ...
+}
+
+const req = newRequestModule;
+inventoryTracker(&quot;apples&quot;, req, &quot;www.inventory-awesome.io&quot;);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="objects-and-data-structures"><strong>Objects and Data Structures</strong></h2>
+<h3 id="use-getters-and-setters">Use getters and setters</h3>
+<p>Using getters and setters to access data on objects could be better than simply
+looking for a property on an object. "Why?" you might ask. Well, here's an
+unorganized list of reasons why:</p>
+<ul>
+<li>When you want to do more beyond getting an object property, you don't have
+  to look up and change every accessor in your codebase.</li>
+<li>Makes adding validation simple when doing a <code>set</code>.</li>
+<li>Encapsulates the internal representation.</li>
+<li>Easy to add logging and error handling when getting and setting.</li>
+<li>You can lazy load your object's properties, let's say getting it from a
+  server.</li>
+</ul>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function makeBankAccount() {
+  // ...
+
+  return {
+    balance: 0
+    // ...
+  };
+}
+
+const account = makeBankAccount();
+account.balance = 100;
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function makeBankAccount() {
+  // this one is private
+  let balance = 0;
+
+  // a &quot;getter&quot;, made public via the returned object below
+  function getBalance() {
+    return balance;
+  }
+
+  // a &quot;setter&quot;, made public via the returned object below
+  function setBalance(amount) {
+    // ... validate before updating the balance
+    balance = amount;
+  }
+
+  return {
+    // ...
+    getBalance,
+    setBalance
+  };
+}
+
+const account = makeBankAccount();
+account.setBalance(100);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="make-objects-have-private-members">Make objects have private members</h3>
+<p>This can be accomplished through closures (for ES5 and below).</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const Employee = function(name) {
+  this.name = name;
+};
+
+Employee.prototype.getName = function getName() {
+  return this.name;
+};
+
+const employee = new Employee(&quot;John Doe&quot;);
+console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
+delete employee.name;
+console.log(`Employee name: ${employee.getName()}`); // Employee name: undefined
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function makeEmployee(name) {
+  return {
+    getName() {
+      return name;
+    }
+  };
+}
+
+const employee = makeEmployee(&quot;John Doe&quot;);
+console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
+delete employee.name;
+console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="classes"><strong>Classes</strong></h2>
+<h3 id="prefer-es2015es6-classes-over-es5-plain-functions">Prefer ES2015/ES6 classes over ES5 plain functions</h3>
+<p>It's very difficult to get readable class inheritance, construction, and method
+definitions for classical ES5 classes. If you need inheritance (and be aware
+that you might not), then prefer ES2015/ES6 classes. However, prefer small functions over
+classes until you find yourself needing larger and more complex objects.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const Animal = function(age) {
+  if (!(this instanceof Animal)) {
+    throw new Error(&quot;Instantiate Animal with `new`&quot;);
+  }
+
+  this.age = age;
+};
+
+Animal.prototype.move = function move() {};
+
+const Mammal = function(age, furColor) {
+  if (!(this instanceof Mammal)) {
+    throw new Error(&quot;Instantiate Mammal with `new`&quot;);
+  }
+
+  Animal.call(this, age);
+  this.furColor = furColor;
+};
+
+Mammal.prototype = Object.create(Animal.prototype);
+Mammal.prototype.constructor = Mammal;
+Mammal.prototype.liveBirth = function liveBirth() {};
+
+const Human = function(age, furColor, languageSpoken) {
+  if (!(this instanceof Human)) {
+    throw new Error(&quot;Instantiate Human with `new`&quot;);
+  }
+
+  Mammal.call(this, age, furColor);
+  this.languageSpoken = languageSpoken;
+};
+
+Human.prototype = Object.create(Mammal.prototype);
+Human.prototype.constructor = Human;
+Human.prototype.speak = function speak() {};
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class Animal {
+  constructor(age) {
+    this.age = age;
+  }
+
+  move() {
+    /* ... */
+  }
+}
+
+class Mammal extends Animal {
+  constructor(age, furColor) {
+    super(age);
+    this.furColor = furColor;
+  }
+
+  liveBirth() {
+    /* ... */
+  }
+}
+
+class Human extends Mammal {
+  constructor(age, furColor, languageSpoken) {
+    super(age, furColor);
+    this.languageSpoken = languageSpoken;
+  }
+
+  speak() {
+    /* ... */
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="use-method-chaining">Use method chaining</h3>
+<p>This pattern is very useful in JavaScript and you see it in many libraries such
+as jQuery and Lodash. It allows your code to be expressive, and less verbose.
+For that reason, I say, use method chaining and take a look at how clean your code
+will be. In your class functions, simply return <code>this</code> at the end of every function,
+and you can chain further class methods onto it.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class Car {
+  constructor(make, model, color) {
+    this.make = make;
+    this.model = model;
+    this.color = color;
+  }
+
+  setMake(make) {
+    this.make = make;
+  }
+
+  setModel(model) {
+    this.model = model;
+  }
+
+  setColor(color) {
+    this.color = color;
+  }
+
+  save() {
+    console.log(this.make, this.model, this.color);
+  }
+}
+
+const car = new Car(&quot;Ford&quot;, &quot;F-150&quot;, &quot;red&quot;);
+car.setColor(&quot;pink&quot;);
+car.save();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class Car {
+  constructor(make, model, color) {
+    this.make = make;
+    this.model = model;
+    this.color = color;
+  }
+
+  setMake(make) {
+    this.make = make;
+    // NOTE: Returning this for chaining
+    return this;
+  }
+
+  setModel(model) {
+    this.model = model;
+    // NOTE: Returning this for chaining
+    return this;
+  }
+
+  setColor(color) {
+    this.color = color;
+    // NOTE: Returning this for chaining
+    return this;
+  }
+
+  save() {
+    console.log(this.make, this.model, this.color);
+    // NOTE: Returning this for chaining
+    return this;
+  }
+}
+
+const car = new Car(&quot;Ford&quot;, &quot;F-150&quot;, &quot;red&quot;).setColor(&quot;pink&quot;).save();
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="prefer-composition-over-inheritance">Prefer composition over inheritance</h3>
+<p>As stated famously in <a href="https://en.wikipedia.org/wiki/Design_Patterns"><em>Design Patterns</em></a> by the Gang of Four,
+you should prefer composition over inheritance where you can. There are lots of
+good reasons to use inheritance and lots of good reasons to use composition.
+The main point for this maxim is that if your mind instinctively goes for
+inheritance, try to think if composition could model your problem better. In some
+cases it can.</p>
+<p>You might be wondering then, "when should I use inheritance?" It
+depends on your problem at hand, but this is a decent list of when inheritance
+makes more sense than composition:</p>
+<ol>
+<li>Your inheritance represents an "is-a" relationship and not a "has-a"
+   relationship (Human-&gt;Animal vs. User-&gt;UserDetails).</li>
+<li>You can reuse code from the base classes (Humans can move like all animals).</li>
+<li>You want to make global changes to derived classes by changing a base class.
+   (Change the caloric expenditure of all animals when they move).</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class Employee {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  // ...
+}
+
+// Bad because Employees &quot;have&quot; tax data. EmployeeTaxData is not a type of Employee
+class EmployeeTaxData extends Employee {
+  constructor(ssn, salary) {
+    super();
+    this.ssn = ssn;
+    this.salary = salary;
+  }
+
+  // ...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class EmployeeTaxData {
+  constructor(ssn, salary) {
+    this.ssn = ssn;
+    this.salary = salary;
+  }
+
+  // ...
+}
+
+class Employee {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  setTaxData(ssn, salary) {
+    this.taxData = new EmployeeTaxData(ssn, salary);
+  }
+  // ...
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="solid"><strong>SOLID</strong></h2>
+<h3 id="single-responsibility-principle-srp">Single Responsibility Principle (SRP)</h3>
+<p>As stated in Clean Code, "There should never be more than one reason for a class
+to change". It's tempting to jam-pack a class with a lot of functionality, like
+when you can only take one suitcase on your flight. The issue with this is
+that your class won't be conceptually cohesive and it will give it many reasons
+to change. Minimizing the amount of times you need to change a class is important.
+It's important because if too much functionality is in one class and you modify
+a piece of it, it can be difficult to understand how that will affect other
+dependent modules in your codebase.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class UserSettings {
+  constructor(user) {
+    this.user = user;
+  }
+
+  changeSettings(settings) {
+    if (this.verifyCredentials()) {
+      // ...
+    }
+  }
+
+  verifyCredentials() {
+    // ...
+  }
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class UserAuth {
+  constructor(user) {
+    this.user = user;
+  }
+
+  verifyCredentials() {
+    // ...
+  }
+}
+
+class UserSettings {
+  constructor(user) {
+    this.user = user;
+    this.auth = new UserAuth(user);
+  }
+
+  changeSettings(settings) {
+    if (this.auth.verifyCredentials()) {
+      // ...
+    }
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="openclosed-principle-ocp">Open/Closed Principle (OCP)</h3>
+<p>As stated by Bertrand Meyer, "software entities (classes, modules, functions,
+etc.) should be open for extension, but closed for modification." What does that
+mean though? This principle basically states that you should allow users to
+add new functionalities without changing existing code.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class AjaxAdapter extends Adapter {
+  constructor() {
+    super();
+    this.name = &quot;ajaxAdapter&quot;;
+  }
+}
+
+class NodeAdapter extends Adapter {
+  constructor() {
+    super();
+    this.name = &quot;nodeAdapter&quot;;
+  }
+}
+
+class HttpRequester {
+  constructor(adapter) {
+    this.adapter = adapter;
+  }
+
+  fetch(url) {
+    if (this.adapter.name === &quot;ajaxAdapter&quot;) {
+      return makeAjaxCall(url).then(response =&gt; {
+        // transform response and return
+      });
+    } else if (this.adapter.name === &quot;nodeAdapter&quot;) {
+      return makeHttpCall(url).then(response =&gt; {
+        // transform response and return
+      });
+    }
+  }
+}
+
+function makeAjaxCall(url) {
+  // request and return promise
+}
+
+function makeHttpCall(url) {
+  // request and return promise
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class AjaxAdapter extends Adapter {
+  constructor() {
+    super();
+    this.name = &quot;ajaxAdapter&quot;;
+  }
+
+  request(url) {
+    // request and return promise
+  }
+}
+
+class NodeAdapter extends Adapter {
+  constructor() {
+    super();
+    this.name = &quot;nodeAdapter&quot;;
+  }
+
+  request(url) {
+    // request and return promise
+  }
+}
+
+class HttpRequester {
+  constructor(adapter) {
+    this.adapter = adapter;
+  }
+
+  fetch(url) {
+    return this.adapter.request(url).then(response =&gt; {
+      // transform response and return
+    });
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h3>
+<p>This is a scary term for a very simple concept. It's formally defined as "If S
+is a subtype of T, then objects of type T may be replaced with objects of type S
+(i.e., objects of type S may substitute objects of type T) without altering any
+of the desirable properties of that program (correctness, task performed,
+etc.)." That's an even scarier definition.</p>
+<p>The best explanation for this is if you have a parent class and a child class,
+then the base class and child class can be used interchangeably without getting
+incorrect results. This might still be confusing, so let's take a look at the
+classic Square-Rectangle example. Mathematically, a square is a rectangle, but
+if you model it using the "is-a" relationship via inheritance, you quickly
+get into trouble.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class Rectangle {
+  constructor() {
+    this.width = 0;
+    this.height = 0;
+  }
+
+  setColor(color) {
+    // ...
+  }
+
+  render(area) {
+    // ...
+  }
+
+  setWidth(width) {
+    this.width = width;
+  }
+
+  setHeight(height) {
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Rectangle {
+  setWidth(width) {
+    this.width = width;
+    this.height = width;
+  }
+
+  setHeight(height) {
+    this.width = height;
+    this.height = height;
+  }
+}
+
+function renderLargeRectangles(rectangles) {
+  rectangles.forEach(rectangle =&gt; {
+    rectangle.setWidth(4);
+    rectangle.setHeight(5);
+    const area = rectangle.getArea(); // BAD: Returns 25 for Square. Should be 20.
+    rectangle.render(area);
+  });
+}
+
+const rectangles = [new Rectangle(), new Rectangle(), new Square()];
+renderLargeRectangles(rectangles);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class Shape {
+  setColor(color) {
+    // ...
+  }
+
+  render(area) {
+    // ...
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Shape {
+  constructor(length) {
+    super();
+    this.length = length;
+  }
+
+  getArea() {
+    return this.length * this.length;
+  }
+}
+
+function renderLargeShapes(shapes) {
+  shapes.forEach(shape =&gt; {
+    const area = shape.getArea();
+    shape.render(area);
+  });
+}
+
+const shapes = [new Rectangle(4, 5), new Rectangle(4, 5), new Square(5)];
+renderLargeShapes(shapes);
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="interface-segregation-principle-isp">Interface Segregation Principle (ISP)</h3>
+<p>JavaScript doesn't have interfaces so this principle doesn't apply as strictly
+as others. However, it's important and relevant even with JavaScript's lack of
+type system.</p>
+<p>ISP states that "Clients should not be forced to depend upon interfaces that
+they do not use." Interfaces are implicit contracts in JavaScript because of
+duck typing.</p>
+<p>A good example to look at that demonstrates this principle in JavaScript is for
+classes that require large settings objects. Not requiring clients to setup
+huge amounts of options is beneficial, because most of the time they won't need
+all of the settings. Making them optional helps prevent having a
+"fat interface".</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class DOMTraverser {
+  constructor(settings) {
+    this.settings = settings;
+    this.setup();
+  }
+
+  setup() {
+    this.rootNode = this.settings.rootNode;
+    this.settings.animationModule.setup();
+  }
+
+  traverse() {
+    // ...
+  }
+}
+
+const $ = new DOMTraverser({
+  rootNode: document.getElementsByTagName(&quot;body&quot;),
+  animationModule() {} // Most of the time, we won't need to animate when traversing.
+  // ...
+});
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class DOMTraverser {
+  constructor(settings) {
+    this.settings = settings;
+    this.options = settings.options;
+    this.setup();
+  }
+
+  setup() {
+    this.rootNode = this.settings.rootNode;
+    this.setupOptions();
+  }
+
+  setupOptions() {
+    if (this.options.animationModule) {
+      // ...
+    }
+  }
+
+  traverse() {
+    // ...
+  }
+}
+
+const $ = new DOMTraverser({
+  rootNode: document.getElementsByTagName(&quot;body&quot;),
+  options: {
+    animationModule() {}
+  }
+});
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dependency-inversion-principle-dip">Dependency Inversion Principle (DIP)</h3>
+<p>This principle states two essential things:</p>
+<ol>
+<li>High-level modules should not depend on low-level modules. Both should
+   depend on abstractions.</li>
+<li>Abstractions should not depend upon details. Details should depend on
+   abstractions.</li>
+</ol>
+<p>This can be hard to understand at first, but if you've worked with AngularJS,
+you've seen an implementation of this principle in the form of Dependency
+Injection (DI). While they are not identical concepts, DIP keeps high-level
+modules from knowing the details of its low-level modules and setting them up.
+It can accomplish this through DI. A huge benefit of this is that it reduces
+the coupling between modules. Coupling is a very bad development pattern because
+it makes your code hard to refactor.</p>
+<p>As stated previously, JavaScript doesn't have interfaces so the abstractions
+that are depended upon are implicit contracts. That is to say, the methods
+and properties that an object/class exposes to another object/class. In the
+example below, the implicit contract is that any Request module for an
+<code>InventoryTracker</code> will have a <code>requestItems</code> method.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class InventoryRequester {
+  constructor() {
+    this.REQ_METHODS = [&quot;HTTP&quot;];
+  }
+
+  requestItem(item) {
+    // ...
+  }
+}
+
+class InventoryTracker {
+  constructor(items) {
+    this.items = items;
+
+    // BAD: We have created a dependency on a specific request implementation.
+    // We should just have requestItems depend on a request method: `request`
+    this.requester = new InventoryRequester();
+  }
+
+  requestItems() {
+    this.items.forEach(item =&gt; {
+      this.requester.requestItem(item);
+    });
+  }
+}
+
+const inventoryTracker = new InventoryTracker([&quot;apples&quot;, &quot;bananas&quot;]);
+inventoryTracker.requestItems();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class InventoryTracker {
+  constructor(items, requester) {
+    this.items = items;
+    this.requester = requester;
+  }
+
+  requestItems() {
+    this.items.forEach(item =&gt; {
+      this.requester.requestItem(item);
+    });
+  }
+}
+
+class InventoryRequesterV1 {
+  constructor() {
+    this.REQ_METHODS = [&quot;HTTP&quot;];
+  }
+
+  requestItem(item) {
+    // ...
+  }
+}
+
+class InventoryRequesterV2 {
+  constructor() {
+    this.REQ_METHODS = [&quot;WS&quot;];
+  }
+
+  requestItem(item) {
+    // ...
+  }
+}
+
+// By constructing our dependencies externally and injecting them, we can easily
+// substitute our request module for a fancy new one that uses WebSockets.
+const inventoryTracker = new InventoryTracker(
+  [&quot;apples&quot;, &quot;bananas&quot;],
+  new InventoryRequesterV2()
+);
+inventoryTracker.requestItems();
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="testing"><strong>Testing</strong></h2>
+<p>Testing is more important than shipping. If you have no tests or an
+inadequate amount, then every time you ship code you won't be sure that you
+didn't break anything. Deciding on what constitutes an adequate amount is up
+to your team, but having 100% coverage (all statements and branches) is how
+you achieve very high confidence and developer peace of mind. This means that
+in addition to having a great testing framework, you also need to use a
+<a href="https://gotwarlost.github.io/istanbul/">good coverage tool</a>.</p>
+<p>There's no excuse to not write tests. There are <a href="https://jstherightway.org/#testing-tools">plenty of good JS test frameworks</a>, so find one that your team prefers.
+When you find one that works for your team, then aim to always write tests
+for every new feature/module you introduce. If your preferred method is
+Test Driven Development (TDD), that is great, but the main point is to just
+make sure you are reaching your coverage goals before launching any feature,
+or refactoring an existing one.</p>
+<h3 id="single-concept-per-test">Single concept per test</h3>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">import assert from &quot;assert&quot;;
+
+describe(&quot;MomentJS&quot;, () =&gt; {
+  it(&quot;handles date boundaries&quot;, () =&gt; {
+    let date;
+
+    date = new MomentJS(&quot;1/1/2015&quot;);
+    date.addDays(30);
+    assert.equal(&quot;1/31/2015&quot;, date);
+
+    date = new MomentJS(&quot;2/1/2016&quot;);
+    date.addDays(28);
+    assert.equal(&quot;02/29/2016&quot;, date);
+
+    date = new MomentJS(&quot;2/1/2015&quot;);
+    date.addDays(28);
+    assert.equal(&quot;03/01/2015&quot;, date);
+  });
+});
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">import assert from &quot;assert&quot;;
+
+describe(&quot;MomentJS&quot;, () =&gt; {
+  it(&quot;handles 30-day months&quot;, () =&gt; {
+    const date = new MomentJS(&quot;1/1/2015&quot;);
+    date.addDays(30);
+    assert.equal(&quot;1/31/2015&quot;, date);
+  });
+
+  it(&quot;handles leap year&quot;, () =&gt; {
+    const date = new MomentJS(&quot;2/1/2016&quot;);
+    date.addDays(28);
+    assert.equal(&quot;02/29/2016&quot;, date);
+  });
+
+  it(&quot;handles non-leap year&quot;, () =&gt; {
+    const date = new MomentJS(&quot;2/1/2015&quot;);
+    date.addDays(28);
+    assert.equal(&quot;03/01/2015&quot;, date);
+  });
+});
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="concurrency"><strong>Concurrency</strong></h2>
+<h3 id="use-promises-not-callbacks">Use Promises, not callbacks</h3>
+<p>Callbacks aren't clean, and they cause excessive amounts of nesting. With ES2015/ES6,
+Promises are a built-in global type. Use them!</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">import { get } from &quot;request&quot;;
+import { writeFile } from &quot;fs&quot;;
+
+get(
+  &quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;,
+  (requestErr, response, body) =&gt; {
+    if (requestErr) {
+      console.error(requestErr);
+    } else {
+      writeFile(&quot;article.html&quot;, body, writeErr =&gt; {
+        if (writeErr) {
+          console.error(writeErr);
+        } else {
+          console.log(&quot;File written&quot;);
+        }
+      });
+    }
+  }
+);
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">import { get } from &quot;request-promise&quot;;
+import { writeFile } from &quot;fs-extra&quot;;
+
+get(&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;)
+  .then(body =&gt; {
+    return writeFile(&quot;article.html&quot;, body);
+  })
+  .then(() =&gt; {
+    console.log(&quot;File written&quot;);
+  })
+  .catch(err =&gt; {
+    console.error(err);
+  });
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="asyncawait-are-even-cleaner-than-promises">Async/Await are even cleaner than Promises</h3>
+<p>Promises are a very clean alternative to callbacks, but ES2017/ES8 brings async and await
+which offer an even cleaner solution. All you need is a function that is prefixed
+in an <code>async</code> keyword, and then you can write your logic imperatively without
+a <code>then</code> chain of functions. Use this if you can take advantage of ES2017/ES8 features
+today!</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">import { get } from &quot;request-promise&quot;;
+import { writeFile } from &quot;fs-extra&quot;;
+
+get(&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;)
+  .then(body =&gt; {
+    return writeFile(&quot;article.html&quot;, body);
+  })
+  .then(() =&gt; {
+    console.log(&quot;File written&quot;);
+  })
+  .catch(err =&gt; {
+    console.error(err);
+  });
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">import { get } from &quot;request-promise&quot;;
+import { writeFile } from &quot;fs-extra&quot;;
+
+async function getCleanCodeArticle() {
+  try {
+    const body = await get(
+      &quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;
+    );
+    await writeFile(&quot;article.html&quot;, body);
+    console.log(&quot;File written&quot;);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+getCleanCodeArticle()
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="error-handling"><strong>Error Handling</strong></h2>
+<p>Thrown errors are a good thing! They mean the runtime has successfully
+identified when something in your program has gone wrong and it's letting
+you know by stopping function execution on the current stack, killing the
+process (in Node), and notifying you in the console with a stack trace.</p>
+<h3 id="dont-ignore-caught-errors">Don't ignore caught errors</h3>
+<p>Doing nothing with a caught error doesn't give you the ability to ever fix
+or react to said error. Logging the error to the console (<code>console.log</code>)
+isn't much better as often times it can get lost in a sea of things printed
+to the console. If you wrap any bit of code in a <code>try/catch</code> it means you
+think an error may occur there and therefore you should have a plan,
+or create a code path, for when it occurs.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">try {
+  functionThatMightThrow();
+} catch (error) {
+  console.log(error);
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">try {
+  functionThatMightThrow();
+} catch (error) {
+  // One option (more noisy than console.log):
+  console.error(error);
+  // Another option:
+  notifyUserOfError(error);
+  // Another option:
+  reportErrorToService(error);
+  // OR do all three!
+}
+</code></pre>
+<h3 id="dont-ignore-rejected-promises">Don't ignore rejected promises</h3>
+<p>For the same reason you shouldn't ignore caught errors
+from <code>try/catch</code>.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">getdata()
+  .then(data =&gt; {
+    functionThatMightThrow(data);
+  })
+  .catch(error =&gt; {
+    console.log(error);
+  });
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">getdata()
+  .then(data =&gt; {
+    functionThatMightThrow(data);
+  })
+  .catch(error =&gt; {
+    // One option (more noisy than console.log):
+    console.error(error);
+    // Another option:
+    notifyUserOfError(error);
+    // Another option:
+    reportErrorToService(error);
+    // OR do all three!
+  });
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="formatting"><strong>Formatting</strong></h2>
+<p>Formatting is subjective. Like many rules herein, there is no hard and fast
+rule that you must follow. The main point is DO NOT ARGUE over formatting.
+There are <a href="https://standardjs.com/rules.html">tons of tools</a> to automate this.
+Use one! It's a waste of time and money for engineers to argue over formatting.</p>
+<p>For things that don't fall under the purview of automatic formatting
+(indentation, tabs vs. spaces, double vs. single quotes, etc.) look here
+for some guidance.</p>
+<h3 id="use-consistent-capitalization">Use consistent capitalization</h3>
+<p>JavaScript is untyped, so capitalization tells you a lot about your variables,
+functions, etc. These rules are subjective, so your team can choose whatever
+they want. The point is, no matter what you all choose, just be consistent.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">const DAYS_IN_WEEK = 7;
+const daysInMonth = 30;
+
+const songs = [&quot;Back In Black&quot;, &quot;Stairway to Heaven&quot;, &quot;Hey Jude&quot;];
+const Artists = [&quot;ACDC&quot;, &quot;Led Zeppelin&quot;, &quot;The Beatles&quot;];
+
+function eraseDatabase() {}
+function restore_database() {}
+
+class animal {}
+class Alpaca {}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">const DAYS_IN_WEEK = 7;
+const DAYS_IN_MONTH = 30;
+
+const SONGS = [&quot;Back In Black&quot;, &quot;Stairway to Heaven&quot;, &quot;Hey Jude&quot;];
+const ARTISTS = [&quot;ACDC&quot;, &quot;Led Zeppelin&quot;, &quot;The Beatles&quot;];
+
+function eraseDatabase() {}
+function restoreDatabase() {}
+
+class Animal {}
+class Alpaca {}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="function-callers-and-callees-should-be-close">Function callers and callees should be close</h3>
+<p>If a function calls another, keep those functions vertically close in the source
+file. Ideally, keep the caller right above the callee. We tend to read code from
+top-to-bottom, like a newspaper. Because of this, make your code read that way.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">class PerformanceReview {
+  constructor(employee) {
+    this.employee = employee;
+  }
+
+  lookupPeers() {
+    return db.lookup(this.employee, &quot;peers&quot;);
+  }
+
+  lookupManager() {
+    return db.lookup(this.employee, &quot;manager&quot;);
+  }
+
+  getPeerReviews() {
+    const peers = this.lookupPeers();
+    // ...
+  }
+
+  perfReview() {
+    this.getPeerReviews();
+    this.getManagerReview();
+    this.getSelfReview();
+  }
+
+  getManagerReview() {
+    const manager = this.lookupManager();
+  }
+
+  getSelfReview() {
+    // ...
+  }
+}
+
+const review = new PerformanceReview(employee);
+review.perfReview();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">class PerformanceReview {
+  constructor(employee) {
+    this.employee = employee;
+  }
+
+  perfReview() {
+    this.getPeerReviews();
+    this.getManagerReview();
+    this.getSelfReview();
+  }
+
+  getPeerReviews() {
+    const peers = this.lookupPeers();
+    // ...
+  }
+
+  lookupPeers() {
+    return db.lookup(this.employee, &quot;peers&quot;);
+  }
+
+  getManagerReview() {
+    const manager = this.lookupManager();
+  }
+
+  lookupManager() {
+    return db.lookup(this.employee, &quot;manager&quot;);
+  }
+
+  getSelfReview() {
+    // ...
+  }
+}
+
+const review = new PerformanceReview(employee);
+review.perfReview();
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h2 id="comments"><strong>Comments</strong></h2>
+<h3 id="only-comment-things-that-have-business-logic-complexity">Only comment things that have business logic complexity.</h3>
+<p>Comments are an apology, not a requirement. Good code <em>mostly</em> documents itself.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">function hashIt(data) {
+  // The hash
+  let hash = 0;
+
+  // Length of string
+  const length = data.length;
+
+  // Loop through every character in data
+  for (let i = 0; i &lt; length; i++) {
+    // Get character code.
+    const char = data.charCodeAt(i);
+    // Make the hash
+    hash = (hash &lt;&lt; 5) - hash + char;
+    // Convert to 32-bit integer
+    hash &amp;= hash;
+  }
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function hashIt(data) {
+  let hash = 0;
+  const length = data.length;
+
+  for (let i = 0; i &lt; length; i++) {
+    const char = data.charCodeAt(i);
+    hash = (hash &lt;&lt; 5) - hash + char;
+
+    // Convert to 32-bit integer
+    hash &amp;= hash;
+  }
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-leave-commented-out-code-in-your-codebase">Don't leave commented out code in your codebase</h3>
+<p>Version control exists for a reason. Leave old code in your history.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">doStuff();
+// doOtherStuff();
+// doSomeMoreStuff();
+// doSoMuchStuff();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">doStuff();
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="dont-have-journal-comments">Don't have journal comments</h3>
+<p>Remember, use version control! There's no need for dead code, commented code,
+and especially journal comments. Use <code>git log</code> to get history!</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">/**
+ * 2016-12-20: Removed monads, didn't understand them (RM)
+ * 2016-10-01: Improved using special monads (JP)
+ * 2016-02-03: Removed type-checking (LI)
+ * 2015-03-14: Added combine with type-checking (JR)
+ */
+function combine(a, b) {
+  return a + b;
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">function combine(a, b) {
+  return a + b;
+}
+</code></pre>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+<h3 id="avoid-positional-markers">Avoid positional markers</h3>
+<p>They usually just add noise. Let the functions and variable names along with the
+proper indentation and formatting give the visual structure to your code.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-javascript">////////////////////////////////////////////////////////////////////////////////
+// Scope Model Instantiation
+////////////////////////////////////////////////////////////////////////////////
+$scope.model = {
+  menu: &quot;foo&quot;,
+  nav: &quot;bar&quot;
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Action setup
+////////////////////////////////////////////////////////////////////////////////
+const actions = function() {
+  // ...
+};
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-javascript">$scope.model = {
+  menu: &quot;foo&quot;,
+  nav: &quot;bar&quot;
+};
+
+const actions = function() {
+  // ...
+};
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Ing. Yubisel Vega Alvarez
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://www.linkedin.com/in/yubisel/" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/Yubisel" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.instant", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
