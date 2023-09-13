@@ -69,6 +69,7 @@ nav:
   - Database:
     - MySql: database/mysql.md
     - SQL Server: database/sql_server.md
+    - MongoDB Shell Commands: database/mongodb.md
 
   - Docker:
     - Docker:
