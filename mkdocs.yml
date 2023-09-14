@@ -78,6 +78,7 @@ nav:
       - install: docker/docker_install.md
 
   - git: 
+    - Alias: git/alias.md
     - tips: git/git.md
     - tips 2: git/tips.md
     - Awesome git Addons: git/awesome_git_addons.md
