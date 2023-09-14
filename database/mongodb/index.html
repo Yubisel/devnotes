@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://yubisel.gitlab.io/commands/others/">
+        <link rel="canonical" href="https://yubisel.gitlab.io/database/mongodb/">
       
       
-        <link rel="prev" href="../uniq/">
+        <link rel="prev" href="../sql_server/">
       
       
-        <link rel="next" href="../../programs/phpmyadmin/">
+        <link rel="next" href="../../docker/docker_notes/">
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>others - &#60;dev notes/&#62;</title>
+        <title>MongoDB Shell Commands - &#60;dev notes/&#62;</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#others-commands" class="md-skip">
+        <a href="#mongodb-shell-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              others
+              MongoDB Shell Commands
             
           </span>
         </div>
@@ -981,14 +981,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -997,7 +999,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Database
@@ -1010,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/" class="md-nav__link">
+      <a href="../mysql/" class="md-nav__link">
         MySql
       </a>
     </li>
@@ -1024,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/sql_server/" class="md-nav__link">
+      <a href="../sql_server/" class="md-nav__link">
         SQL Server
       </a>
     </li>
@@ -1036,11 +1038,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../database/mongodb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MongoDB Shell Commands
       </a>
+      
     </li>
   
 
@@ -1579,16 +1591,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
@@ -1597,7 +1607,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Commands/Bash programs
@@ -1637,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/ssh/" class="md-nav__link">
+      <a href="../../commands/ssh/ssh/" class="md-nav__link">
         ssh
       </a>
     </li>
@@ -1651,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/copy_the_public_key/" class="md-nav__link">
+      <a href="../../commands/ssh/copy_the_public_key/" class="md-nav__link">
         Copy the public key to server
       </a>
     </li>
@@ -1672,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dd/" class="md-nav__link">
+      <a href="../../commands/dd/" class="md-nav__link">
         dd
       </a>
     </li>
@@ -1686,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pwgen/" class="md-nav__link">
+      <a href="../../commands/pwgen/" class="md-nav__link">
         pwgen
       </a>
     </li>
@@ -1700,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seq/" class="md-nav__link">
+      <a href="../../commands/seq/" class="md-nav__link">
         seq
       </a>
     </li>
@@ -1714,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ncdu/" class="md-nav__link">
+      <a href="../../commands/ncdu/" class="md-nav__link">
         ncdu
       </a>
     </li>
@@ -1728,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grep/directory_word_search/" class="md-nav__link">
+      <a href="../../commands/grep/directory_word_search/" class="md-nav__link">
         grep
       </a>
     </li>
@@ -1742,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jq/" class="md-nav__link">
+      <a href="../../commands/jq/" class="md-nav__link">
         jq
       </a>
     </li>
@@ -1756,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mktemp/" class="md-nav__link">
+      <a href="../../commands/mktemp/" class="md-nav__link">
         mktemp
       </a>
     </li>
@@ -1770,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tar/" class="md-nav__link">
+      <a href="../../commands/tar/" class="md-nav__link">
         tar
       </a>
     </li>
@@ -1784,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uniq/" class="md-nav__link">
+      <a href="../../commands/uniq/" class="md-nav__link">
         uniq
       </a>
     </li>
@@ -1796,59 +1806,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          others
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../commands/others/" class="md-nav__link">
         others
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#echo" class="md-nav__link">
-    echo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saber-el-nombre-de-tu-usuario" class="md-nav__link">
-    Saber el nombre de tu usuario
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2130,13 +2092,255 @@
 
 
 
-<h1 id="others-commands">Others commands</h1>
-<h2 id="echo">echo</h2>
-<p>Los comandos en linux tienen códigos de retorno por convención el 0 es que todo se ejecutó de manera satisfactoria en caso de no ser 0 cada uno de los comandos tienen su propio significado para el código de retorno.</p>
-<p>Una de las formas de saber que retorno un comando es luego de su ejecución hacer la consulta con <code>echo $?</code> esto devolverá el código en cuestión.</p>
-<h2 id="saber-el-nombre-de-tu-usuario">Saber el nombre de tu usuario</h2>
-<pre><code class="language-bash">whoami
+<h1 id="mongodb-shell-commands">MongoDB Shell Commands</h1>
+<ul>
+<li>Show databases</li>
+</ul>
+<pre><code class="language-sh">show dbs
 </code></pre>
+<p>This command will show all the databases in your MongoDB server.</p>
+<ul>
+<li>Use database</li>
+</ul>
+<pre><code class="language-sh">use &lt;database-name&gt;
+</code></pre>
+<p>This command will switch to the database you want to use.</p>
+<ul>
+<li>Show collections</li>
+</ul>
+<pre><code class="language-sh">show collections
+</code></pre>
+<p>This command will show all the collections in the database you are using.</p>
+<ul>
+<li>Drop database</li>
+</ul>
+<pre><code class="language-sh">db.dropDatabase()
+</code></pre>
+<p>This command will drop the database you are using.</p>
+<ul>
+<li>Create collection</li>
+</ul>
+<pre><code class="language-sh">db.createCollection(&quot;&lt;collection_name&gt;&quot;)
+</code></pre>
+<p>This command will create a collection in the database you are using.</p>
+<ul>
+<li>Insert a Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.insertOne({
+    &lt;key&gt;: &lt;value&gt;,
+    &lt;key&gt;: &lt;value&gt;,
+    ...
+})
+</code></pre>
+<p>This command will insert a document in the collection you are using.</p>
+<ul>
+<li>Insert Multiple Documents</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.insertMany([
+    {
+        &lt;key&gt;: &lt;value&gt;,
+        &lt;key&gt;: &lt;value&gt;,
+        ...
+    },
+    {
+        &lt;key&gt;: &lt;value&gt;,
+        &lt;key&gt;: &lt;value&gt;,
+        ...
+    },
+    ...
+])
+</code></pre>
+<p>This command will insert multiple documents in the collection you are using.</p>
+<ul>
+<li>Find Documents</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find()
+</code></pre>
+<p>This command will find all the documents in the collection you are using.</p>
+<ul>
+<li>Find Documents with Query</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: &lt;value&gt;
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that match the query.</p>
+<ul>
+<li>Count Documents</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: &lt;value&gt;
+    }).count()
+</code></pre>
+<p>This command will count all the documents in the collection you are using that match the query.</p>
+<ul>
+<li>Limit Documents</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find().limit(&lt;number&gt;)
+</code></pre>
+<p>This command will limit the number of documents returned by the find command.</p>
+<ul>
+<li>forEach()</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find().forEach(function(doc) {
+    print(&quot;Key: &quot; + doc.&lt;key&gt; + &quot; Value: &quot; + doc.&lt;value&gt;);
+})
+</code></pre>
+<p>This command will iterate through all the documents in the collection you are using and print the key and value of each document.</p>
+<ul>
+<li>Find One Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.findOne({
+    &lt;key&gt;: &lt;value&gt;
+})
+</code></pre>
+<p>This command will find the first document in the collection you are using that matches the query.</p>
+<ul>
+<li>Update a Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.updateOne({
+    &lt;key&gt;: &lt;value&gt;
+}, {
+    $set: {
+        &lt;key&gt;: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will update the first document in the collection you are using that matches the query. $set is used to update the document.</p>
+<ul>
+<li>Increment a Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.updateOne({
+    &lt;key&gt;: &lt;value&gt;
+}, {
+    $inc: {
+        &lt;key&gt;: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will increment the value of the key in the first document in the collection you are using that matches the query. $inc is used to increment the value of the key.</p>
+<ul>
+<li>Delete a Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.deleteOne({
+    &lt;key&gt;: &lt;value&gt;
+})
+</code></pre>
+<p>This command will delete the first document in the collection you are using that matches the query.</p>
+<ul>
+<li>Add new field to a Document</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.updateOne({
+    &lt;key&gt;: &lt;value&gt;
+}, {
+    $set: {
+        &lt;new_key&gt;: &lt;new_value&gt;
+    }
+})
+</code></pre>
+<p>This command will add a new field to the first document in the collection you are using that matches the query.</p>
+<ul>
+<li>Greater than</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: {
+        $gt: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that have a key greater than the value.</p>
+<ul>
+<li>Greater than or equal to</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: {
+        $gte: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that have a key greater than or equal to the value.</p>
+<ul>
+<li>Less than</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: {
+        $lt: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that have a key less than the value.</p>
+<ul>
+<li>Less than or equal to</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: {
+        $lte: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that have a key less than or equal to the value.</p>
+<ul>
+<li>Not equal to</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    &lt;key&gt;: {
+        $ne: &lt;value&gt;
+    }
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that have a key not equal to the value.</p>
+<ul>
+<li>And</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    $and: [
+        {
+            &lt;key&gt;: &lt;value&gt;
+        },
+        {
+            &lt;key&gt;: &lt;value&gt;
+        }
+    ]
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that match the query.</p>
+<ul>
+<li>Or</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find({
+    $or: [
+        {
+            &lt;key&gt;: &lt;value&gt;
+        },
+        {
+            &lt;key&gt;: &lt;value&gt;
+        }
+    ]
+})
+</code></pre>
+<p>This command will find all the documents in the collection you are using that match the query.</p>
+<ul>
+<li>Sort</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find().sort({
+    &lt;key&gt;: &lt;value&gt;
+})
+</code></pre>
+<p>This command will sort all the documents in the collection you are using by the key.</p>
+<ul>
+<li>Sort Descending</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.find().sort({
+    &lt;key&gt;: -1
+})
+</code></pre>
+<p>This command will sort all the documents in the collection you are using by the key in descending order.</p>
+<ul>
+<li>Drop Collection</li>
+</ul>
+<pre><code class="language-sh">db.&lt;collection_name&gt;.drop()
+</code></pre>
+<p>This command will drop the collection you are using.</p>
 
 
 
