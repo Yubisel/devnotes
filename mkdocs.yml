@@ -116,6 +116,7 @@ nav:
     - tar: commands/tar.md
     - commands/uniq.md
     - others: commands/others.md
+    - tmux: commands/tmux.md
 
   - Programs:
     - phpmyadmin: programs/phpmyadmin.md
@@ -123,9 +124,6 @@ nav:
     - Apache:
       - General: programs/apache/general.md
       - Permisos: programs/apache/permits.md
-
-  - ToDo:
-    - Films to watch: todo/films_to_watch.md
 
   - Links:
     - Images: links/images.md
