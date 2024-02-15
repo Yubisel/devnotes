@@ -89,6 +89,7 @@ nav:
       - Gnome: operating_systems/linux/gnome/extensions.md
       - Estructura de ficheros: operating_systems/linux/estructura_de_directorios.md
       - CDPATH: operating_systems/linux/cdpath.md
+      - Comandos: operating_systems/linux/usefull_terminal_shortcuts.md
 
     - Ubuntu:
       - My config: operating_systems/ubuntu/my_config.md
